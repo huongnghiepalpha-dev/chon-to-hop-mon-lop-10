@@ -1,51 +1,5 @@
 <!DOCTYPE html>
 <html lang="vi">
-<!--
-=======================================================================
-  HƯỚNG NGHIỆP ALPHA — Công cụ tra cứu tổ hợp môn lớp 10
-  Phiên bản: 2.7  |  Ngày: 2026-06-12
-  Tác giả: HNA (Trần Văn Đăng) — 096 937 4411
-  Website: www.huongnghiepalpha.vn
-=======================================================================
-
-  LUỒNG 4 BƯỚC:
-    B1. Hiểu mình  → chọn đặc điểm bản thân (20 mô tả Holland+Gardner)
-    B2. Nhóm ngành → accordion Sông An style, chọn 1 ngành
-    B3. Tổ hợp ĐH  → tổ hợp + trường đúng ngành
-    B4. Môn lớp 10 → tìm trường, nhập tổ hợp, chọn môn thi TN, sơ đồ SVG
-
-  CÁCH CẬP NHẬT DỮ LIỆU:
-  ─────────────────────────────────────────────────────────────────────
-  1. THÊM/SỬA NGÀNH → tìm "const NGANH=[" trong <script>
-     Mỗi entry có: id, icon, ten, mo, tomtat, dh[], mon_txt[], 
-                   tohop_l10[], truong, warn, traits[]
-     - dh[0] phải là tổ hợp CHỦ LỰC của ngành (★ sẽ tự gán)
-     - traits[] phải dùng đúng id trong TRAITS[]
-
-  2. THÊM/SỬA TRƯỜNG ĐỒNG NAI → tìm "const ALL_SCHOOLS=["
-     Thêm object {ten:'...', tohop:{A00:'...', B00:'...', ...}}
-
-  3. THÊM TỔ HỢP MÔN → tìm "const CHUNG_TABLE=["
-     Format: {dh:'X00', mon3:'...', l10:'...', nganh:'...'}
-
-  4. SỬA THÔNG TIN LIÊN HỆ → tìm "096 937 4411" và thay toàn bộ
-
-  5. GẮN GOOGLE FORM → tìm "GOOGLE_FORM_URL" và thay link
-
-  LƯU Ý QUAN TRỌNG:
-  ─────────────────────────────────────────────────────────────────────
-  - File chạy OFFLINE hoàn toàn (không cần server, không cần internet)
-    ngoại trừ font Google (Be Vietnam Pro) — nếu offline thì thêm
-    font-family fallback: sans-serif
-  - Mọi data đều trong file này, không có file phụ
-  - Tương thích: Chrome, Firefox, Safari, Edge — desktop & mobile
-  - Để chia sẻ qua Zalo: gửi file .html trực tiếp
-    → người nhận mở bằng trình duyệt trên điện thoại/máy tính
-  - Để đặt lên website: upload file lên hosting, link trực tiếp
-
-=======================================================================
--->
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -474,8 +428,7 @@ a.footer-hl:hover{text-decoration:underline}
     <div class="hero-desc">Chọn mô tả phù hợp với bản thân để nhận gợi ý nhóm ngành, tổ hợp xét tuyển tham khảo và môn lựa chọn nên đăng ký ở lớp 10.</div>
   </div>
 
-  <!-- PANEL 0: CẤU TRÚC CHƯƠNG TRÌNH -->
-  <div class="ctruc-wrap" id="ctruc-wrap">
+    <div class="ctruc-wrap" id="ctruc-wrap">
     <div class="ctruc-header">
       <div>
         <div class="ctruc-title">Chọn Tổ Hợp Môn Lớp 10 Theo Chương Trình 2018</div>
@@ -485,8 +438,7 @@ a.footer-hl:hover{text-decoration:underline}
     </div>
 
     <div id="ctruc-body">
-      <!-- TỔNG QUAN -->
-      <div class="ctruc-summary">
+            <div class="ctruc-summary">
         <div class="cs-box cs-total">
           <div class="cs-num">12</div>
           <div class="cs-label">Môn ghi học bạ</div>
@@ -504,10 +456,8 @@ a.footer-hl:hover{text-decoration:underline}
         </div>
       </div>
 
-      <!-- BẢNG 2 CỘT -->
-      <div class="ctruc-tables">
-        <!-- CỘT TRÁI: BẮT BUỘC -->
-        <div class="ct-table">
+            <div class="ctruc-tables">
+                <div class="ct-table">
           <div class="ct-head ct-head-bb">8 MÔN BẮT BUỘC</div>
           <table class="ct-tbl">
             <thead><tr><th>STT</th><th>Môn học</th></tr></thead>
@@ -524,8 +474,7 @@ a.footer-hl:hover{text-decoration:underline}
           </table>
         </div>
 
-        <!-- CỘT PHẢI: TỰ CHỌN -->
-        <div class="ct-table">
+                <div class="ct-table">
           <div class="ct-head ct-head-tc">9 MÔN TỰ CHỌN <span style="font-weight:400;font-size:11px">(chọn 4 trong 9)</span></div>
           <table class="ct-tbl">
             <thead><tr><th>STT</th><th>Môn học</th></tr></thead>
@@ -544,14 +493,12 @@ a.footer-hl:hover{text-decoration:underline}
         </div>
       </div>
 
-      <!-- LƯU Ý QUAN TRỌNG -->
-      <div class="ctruc-note">
+            <div class="ctruc-note">
         <span class="note-icon">💡</span>
         <span>4 môn tự chọn bạn đăng ký ở lớp 10 sẽ học xuyên suốt lớp 10–11–12 → trực tiếp quyết định tổ hợp xét tuyển đại học. <strong>Chọn sai rất khó sửa!</strong></span>
       </div>
 
-      <!-- MỐC THỜI GIAN 2026 -->
-      <div class="ts26-wrap">
+            <div class="ts26-wrap">
         <div class="ts26-header">
           <span class="ts26-badge">📅 2026</span>
           <span class="ts26-title">Mốc thời gian xét tuyển đại học quan trọng</span>
@@ -611,8 +558,7 @@ a.footer-hl:hover{text-decoration:underline}
     <div class="flow-step" id="fs4" onclick="goStep(4)"><span class="fn">4</span>Môn lớp 10</div>
   </div>
 
-  <!-- PANEL 1 -->
-  <div class="panel show" id="panel1">
+    <div class="panel show" id="panel1">
     <div class="slabel">Bước 1 — Chọn những từ mô tả đúng bản thân (chọn nhiều nhất có thể)</div>
     <div class="trait-grid" id="trait-grid"></div>
     <div class="sbar">
@@ -625,8 +571,7 @@ a.footer-hl:hover{text-decoration:underline}
     </div>
   </div>
 
-  <!-- PANEL 2 -->
-  <div class="panel" id="panel2">
+    <div class="panel" id="panel2">
     <div class="slabel">Bước 2 — Chọn nhóm ngành phù hợp với bạn</div>
     <p style="font-size:12px;color:var(--text3);margin-bottom:.625rem">Bấm vào ngành để xem chi tiết · Chọn 1 ngành để tiếp tục</p>
     <div class="nganh-search-wrap">
@@ -640,8 +585,7 @@ a.footer-hl:hover{text-decoration:underline}
     </div>
   </div>
 
-  <!-- PANEL 3 -->
-  <div class="panel" id="panel3">
+    <div class="panel" id="panel3">
     <div class="slabel">Bước 3 — Tổ hợp xét tuyển đại học</div>
     <div id="dh-result"></div>
     <div class="btn-row">
@@ -650,20 +594,17 @@ a.footer-hl:hover{text-decoration:underline}
     </div>
   </div>
 
-  <!-- PANEL 4 -->
-  <div class="panel" id="panel4">
+    <div class="panel" id="panel4">
     <div class="slabel">Bước 4 — Môn cần chọn lớp 10 & kiểm tra tổ hợp trường bạn</div>
     <div id="school-result"></div>
 
-    <!-- TÌM TRƯỜNG -->
-    <div class="school-search-box">
+        <div class="school-search-box">
       <div class="rl">Tìm trường của bạn trong dữ liệu</div>
       <input type="text" id="school-input" placeholder="Nhập tên trường THPT của bạn..." oninput="searchSchool(this.value)">
       <div id="school-search-result"></div>
     </div>
 
-    <!-- NHẬP TỔ HỢP TRƯỜNG (nếu không có trong dữ liệu) -->
-    <div class="tohop-builder" id="tohop-builder">
+        <div class="tohop-builder" id="tohop-builder">
       <div class="tb-title">Trường bạn có những tổ hợp môn nào?</div>
       <div class="tb-sub">Chọn các môn trong tổ hợp trường bạn đã/sẽ đăng ký → hệ thống tự so sánh với ngành bạn muốn học</div>
       <div class="rl" style="margin-bottom:6px">Chọn môn để tạo tổ hợp trường</div>
@@ -671,8 +612,7 @@ a.footer-hl:hover{text-decoration:underline}
       <div class="rl" style="margin-bottom:4px">Tổ hợp bạn đã chọn <span style="color:var(--text3);font-weight:400">(tối đa 4 môn)</span></div>
       <div class="tohop-slots" id="tohop-slots"><span class="slots-hint">Chọn môn bên trên để thêm vào đây...</span></div>
 
-      <!-- BƯỚC 2B: CHỌN 2 MÔN THI TỐT NGHIỆP -->
-      <div class="tn-section hidden" id="tn-section">
+            <div class="tn-section hidden" id="tn-section">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
           <div style="background:var(--amber);color:#142768;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px">Bước tiếp theo</div>
           <div class="rl" style="margin-bottom:0">Chọn 2 môn thi tốt nghiệp từ 4 môn đã đăng ký</div>
@@ -701,8 +641,7 @@ a.footer-hl:hover{text-decoration:underline}
       <button class="btn btn-primary" onclick="checkMatch()" id="btn-check" style="margin-top:.75rem;opacity:.4" disabled>Kiểm tra phù hợp với ngành →</button>
       <div id="match-result"></div>
 
-      <!-- FORM GỬI DATA -->
-      <div class="send-form" id="send-form" style="display:none">
+            <div class="send-form" id="send-form" style="display:none">
         <div class="sf-title">Gửi thông tin để HNA hỗ trợ tư vấn miễn phí</div>
         <div class="sf-sub">HNA sẽ liên hệ tư vấn chi tiết hơn cho tổ hợp và ngành của bạn. Thông tin chỉ dùng để hỗ trợ học sinh, không chia sẻ cho bên thứ ba.</div>
         <div class="row2">
@@ -754,6 +693,17 @@ a.footer-hl:hover{text-decoration:underline}
 </footer>
 
 <script>
+// CÀI ĐẶT HẠN SỬ DỤNG ĐẾN 30/10/2026
+const EXPIRE_DATE = new Date('2026-10-30T23:59:59');
+if (new Date() > EXPIRE_DATE) {
+  document.body.innerHTML = `
+    <div style="text-align:center; padding: 50px 20px; font-family: 'Be Vietnam Pro', sans-serif;">
+      <h2 style="color: #142768;">Phiên bản đã hết hạn</h2>
+      <p style="color: #4a5068; line-height: 1.6; max-width: 400px; margin: 10px auto;">Công cụ tra cứu tổ hợp môn năm 2026 đã đóng. Vui lòng đăng ký thông tin để nhận đường link truy cập phiên bản mới nhất.</p>
+      <a href="LINK_FORM_DANG_KY_CUA_BAN" target="_blank" style="display:inline-block; margin-top:20px; padding:12px 24px; background:#FF9900; color:#142768; text-decoration:none; font-weight:bold; border-radius:8px;">Đăng ký nhận bản mới →</a>
+    </div>`;
+}
+
 const TRAITS=[
   {id:'may-moc',    label:'Thích làm việc với máy móc, công cụ, thiết bị',     cats:['cokhi','cntt','xd','quan-doi']},
   {id:'thuc-hanh',  label:'Thích thực hành hơn lý thuyết, học qua làm',        cats:['cokhi','yd','nlts','quan-doi']},
@@ -1573,919 +1523,4 @@ const NGANH_TRUONG_MIEN={
   'dien-tu':{B:[{t:'Đại Học Bách Khoa Hà Nội',m:'BKA',th:'A00',diem:26.21,hp:22,ct:80},{t:'Đại học SP Kỹ thuật Hưng Yên',m:'SKH',th:'A00',diem:21.78,hp:14,ct:60},{t:'Đại học CN Giao thông vận tải',m:'GTA',th:'A00',diem:23.67,hp:16,ct:60},{t:'Đại học Điện Lực',m:'DDL',th:'A00',diem:21.38,hp:14,ct:120},{t:'Đại Học Công Nghiệp Hà Nội',m:'DCN',th:'A00',diem:22.89,hp:16,ct:80}],T:[],N:[{t:'Đại Học SP Kỹ Thuật TPHCM',m:'SKS',th:'A00',diem:23.04,hp:14,ct:150},{t:'Đại Học Bách Khoa TPHCM',m:'BKH',th:'A00',diem:27.73,hp:28,ct:150},{t:'Đại Học Công Nghiệp TPHCM',m:'DIC',th:'A00',diem:21.56,hp:18,ct:100},{t:'Đại Học Lạc Hồng',m:'LHU',th:'A00',diem:16.61,hp:20,ct:100},{t:'ĐH Công Nghệ Đồng Nai',m:'DNH',th:'A00',diem:16.39,hp:25,ct:150}]},
   'hang-khong':{B:[{t:'Đại Học Bách Khoa Hà Nội',m:'BKA',th:'A00',diem:27.5,hp:28,ct:180},{t:'Đại Học Giao Thông Vận Tải',m:'GHA',th:'A00',diem:22.68,hp:14,ct:60},{t:'Đại Học Công Nghệ-ĐHQG Hà Nội',m:'QHI',th:'A00',diem:26.48,hp:22,ct:100},{t:'Đại Học Việt Nhật-ĐHQG Hà Nội',m:'VJU',th:'A00',diem:21.68,hp:14,ct:100}],T:[],N:[{t:'Học Viện Hàng Không VN',m:'HKV',th:'A00',diem:20.87,hp:18,ct:100},{t:'Đại Học Bách Khoa TPHCM',m:'BKH',th:'A00',diem:26.72,hp:28,ct:100}]},
   'vat-lieu':{B:[{t:'Đại Học Bách Khoa Hà Nội',m:'BKA',th:'A00',diem:24.84,hp:25,ct:150},{t:'Đại Học KHTN-ĐHQGHN',m:'QHT',th:'A00',diem:26.72,hp:18,ct:200},{t:'Đại học KH&CN Hà Nội',m:'KCN',th:'A00',diem:21.62,hp:16,ct:120}],T:[],N:[{t:'Đại Học Bách Khoa TPHCM',m:'BKH',th:'A00',diem:27.67,hp:15,ct:120},{t:'ĐH KHTN-ĐHQG TPHCM',m:'QST2',th:'A00',diem:25.39,hp:18,ct:120}]},
-  'thuc-pham':{B:[{t:'Đại Học Bách Khoa Hà Nội',m:'BKA',th:'B00',diem:27.16,hp:22,ct:150}],T:[],N:[{t:'Đại Học Nông Lâm TPHCM',m:'NLS',th:'B00',diem:22.04,hp:14,ct:120},{t:'Đại Học Công Nghiệp TPHCM',m:'DIC',th:'B00',diem:24.48,hp:18,ct:100},{t:'Đại Học Cần Thơ',m:'CTU',th:'B00',diem:20.93,hp:16,ct:100},{t:'Đại Học Bách Khoa TPHCM',m:'BKH',th:'B00',diem:25.73,hp:18,ct:80},{t:'Đại Học Lạc Hồng',m:'LHU',th:'B00',diem:18.61,hp:22,ct:100}]},
-  'hang-hai':{B:[{t:'Đại học Hàng Hải Việt Nam',m:'HHA',th:'A00',diem:23.09,hp:12,ct:80},{t:'Đại Học Thuỷ Lợi',m:'TLU',th:'A00',diem:25.37,hp:25,ct:120},{t:'Đại Học Tài Nguyên Môi Trường HN',m:'DMT',th:'A00',diem:22.99,hp:18,ct:150},{t:'Đại Học Bách Khoa Hà Nội',m:'BKA',th:'A00',diem:25.63,hp:15,ct:100}],T:[],N:[{t:'Đại Học Bách Khoa TPHCM',m:'BKH',th:'A00',diem:25.68,hp:22,ct:100},{t:'ĐH Tài Nguyên Môi Trường TPHCM',m:'TMT',th:'A00',diem:20.66,hp:18,ct:80}]},
-  'mo-dia':{B:[{t:'Đại Học Mỏ Địa Chất',m:'MDC',th:'A00',diem:20.51,hp:10,ct:150},{t:'Đại Học Tài Nguyên Môi Trường HN',m:'DMT',th:'A00',diem:20.61,hp:12,ct:120},{t:'Đại Học KHTN-ĐHQGHN',m:'QHT',th:'A00',diem:24.91,hp:15,ct:180}],T:[],N:[{t:'ĐH Tài Nguyên Môi Trường TPHCM',m:'TMT',th:'A00',diem:20.56,hp:16,ct:120}]},
-  'toan-tk':{B:[{t:'Đại Học KHTN-ĐHQGHN',m:'QHT',th:'A00',diem:25.86,hp:15,ct:120},{t:'Đại Học Bách Khoa Hà Nội',m:'BKA',th:'A00',diem:28.26,hp:25,ct:80},{t:'Đại Học Kinh Tế Quốc Dân',m:'KHA',th:'A00',diem:27.79,hp:25,ct:150},{t:'Đại Học Sư Phạm Hà Nội',m:'SPH',th:'A00',diem:19.41,hp:10,ct:80}],T:[],N:[{t:'ĐH KHTN-ĐHQG TPHCM',m:'QST2',th:'A00',diem:25.1,hp:28,ct:120},{t:'Đại Học Bách Khoa TPHCM',m:'BKH',th:'A00',diem:24.84,hp:18,ct:80}]},
-  'nhan-su':{B:[{t:'Đại Học Kinh Tế Quốc Dân',m:'KHA',th:'D01',diem:26.73,hp:25,ct:180},{t:'Đại Học Lao Động Xã Hội',m:'LDX',th:'D01',diem:22.28,hp:18,ct:80}],T:[],N:[{t:'Đại Học Kinh Tế TPHCM(UEH)',m:'UEH',th:'D01',diem:27.6,hp:25,ct:150},{t:'Đại Học Văn Lang',m:'VLU',th:'D01',diem:19.54,hp:35,ct:300},{t:'ĐH Công Nghệ TPHCM(HUTECH)',m:'HTC2',th:'D01',diem:19.95,hp:35,ct:300},{t:'Đại Học Thủ Dầu Một',m:'TDM',th:'D01',diem:22.42,hp:18,ct:60}]},
-  'van-hoa':{B:[{t:'Đại Học KHXH&NV Hà Nội',m:'QHX',th:'C00',diem:24.21,hp:12,ct:80},{t:'Học Viện Báo Chí và Tuyên Truyền',m:'HBT',th:'C00',diem:20.46,hp:10,ct:80},{t:'Đại học Văn hoá Hà Nội',m:'VHH',th:'C00',diem:20.32,hp:18,ct:60},{t:'Học Viện Chính Trị Quốc Gia HCM',m:'CTQ',th:'C00',diem:19.86,hp:16,ct:120},{t:'Học Viện Hành Chính Quốc Gia',m:'HAQ',th:'C00',diem:22.79,hp:16,ct:100}],T:[],N:[{t:'ĐH Sư Phạm TPHCM',m:'SPS',th:'C00',diem:19.18,hp:14,ct:100}]},
-  'the-thao':{B:[{t:'Đại học SP TDTT Hà Nội',m:'TDH',th:'T00',diem:22.87,hp:16,ct:60},{t:'Đại học TDTT Bắc Ninh',m:'TDB',th:'T00',diem:22.78,hp:14,ct:150}],T:[],N:[{t:'ĐH Sư Phạm TPHCM',m:'SPS',th:'T00',diem:22.64,hp:12,ct:120}]},
-  'thoi-trang':{B:[{t:'Đại Học Mỹ Thuật Việt Nam',m:'MTV',th:'H00',diem:19.63,hp:12,ct:80},{t:'Đại Học Kiến Trúc Hà Nội',m:'KTH',th:'H00',diem:24.0,hp:12,ct:60},{t:'Đại Học Sư Phạm Hà Nội 2',m:'SP2',th:'H00',diem:19.33,hp:14,ct:150}],T:[],N:[{t:'Đại Học Kiến Trúc TPHCM',m:'KTS',th:'H00',diem:23.12,hp:18,ct:100}]},
-  'in-giay':{B:[{t:'Đại Học Bách Khoa Hà Nội',m:'BKA',th:'A00',diem:26.26,hp:25,ct:200},{t:'Đại Học Công Nghiệp Hà Nội',m:'DCN',th:'A00',diem:20.67,hp:16,ct:100}],T:[],N:[{t:'Đại Học SP Kỹ Thuật TPHCM',m:'SKS',th:'A00',diem:21.75,hp:16,ct:120},{t:'Đại Học Công Nghiệp TPHCM',m:'DIC',th:'A00',diem:19.44,hp:10,ct:120}]},
-  'tai-nguyen':{B:[{t:'Đại Học Tài Nguyên Môi Trường HN',m:'DMT',th:'A00',diem:23.04,hp:18,ct:100},{t:'Đại Học KHTN-ĐHQGHN',m:'QHT',th:'A00',diem:24.6,hp:18,ct:200}],T:[{t:'Đại Học Khoa Học-ĐH Huế',m:'KHH',th:'A00',diem:23.6,hp:18,ct:150}],N:[{t:'ĐH Tài Nguyên Môi Trường TPHCM',m:'TMT',th:'A00',diem:24.23,hp:14,ct:150},{t:'Đại Học Nông Lâm TPHCM',m:'NLS',th:'A00',diem:19.22,hp:12,ct:120}]},
-  'cham-soc':{B:[],T:[],N:[{t:'ĐH Công Nghệ TPHCM(HUTECH)',m:'HTC2',th:'D01',diem:17.59,hp:38,ct:200},{t:'Đại Học Văn Lang',m:'VLU',th:'D01',diem:15.91,hp:42,ct:250},{t:'ĐH Nguyễn Tất Thành',m:'NTT',th:'D01',diem:18.17,hp:25,ct:100}]},
-  'cong-tac-xa-hoi':{B:[{t:'Đại Học KHXH&NV Hà Nội',m:'QHX',th:'D01',diem:21.59,hp:16,ct:100},{t:'Đại Học Lao Động Xã Hội',m:'LDX',th:'D01',diem:20.77,hp:10,ct:80}],T:[{t:'Đại Học Đà Lạt',m:'DLU',th:'D01',diem:20.81,hp:16,ct:100}],N:[{t:'Đại Học Văn Hiến',m:'VHU',th:'D01',diem:18.31,hp:25,ct:300}]},
-  'bac-si-thu-y':{B:[{t:'Học Viện Nông Nghiệp Việt Nam',m:'HVN',th:'B00',diem:19.2,hp:10,ct:100}],T:[{t:'Đại Học Nha Trang',m:'NTU2',th:'B00',diem:20.39,hp:10,ct:120}],N:[{t:'Đại Học Nông Lâm TPHCM',m:'NLS',th:'B00',diem:23.76,hp:10,ct:150},{t:'Đại Học Cần Thơ',m:'CTU',th:'B00',diem:21.54,hp:10,ct:80},{t:'Đại Học An Giang-ĐHQG TPHCM',m:'AGU',th:'B00',diem:21.85,hp:18,ct:120}]},
-};
-
-let dhActiveTab='tohop';
-function switchDHTab(tab){
-  dhActiveTab=tab;
-  document.querySelectorAll('.dh-tab').forEach(t=>t.classList.toggle('active',t.dataset.tab===tab));
-  document.querySelectorAll('.dh-tabpane').forEach(p=>p.classList.toggle('show',p.dataset.pane===tab));
-  if(tab==='truong'){schoolSearchQuery='';schoolFilterMien='Tất cả';renderSchoolList();}
-}
-function buildDH(){
-  const n=NGANH.find(x=>x.id===selN);if(!n)return;
-  const ch=CO_HOI[selN];
-  const mainTH=n.dh[0].split(':')[0].trim();
-  dhActiveTab='tohop';
-  document.getElementById('dh-result').innerHTML=`
-    <div class="cdung">"${n.tomtat}"</div>
-    <div class="dh-card">
-      <div class="dh-card-head">
-        <div class="dh-nganh-icon">${n.icon}</div>
-        <div style="flex:1;min-width:0">
-          <div class="dh-nganh-name">${n.ten}</div>
-          <div class="dh-nganh-sub">${n.dh.slice(0,4).map(d=>d.split(':')[0]).join(' · ')}</div>
-        </div>
-      </div>
-      <div class="dh-tabs">
-        <button class="dh-tab active" data-tab="tohop" onclick="switchDHTab('tohop')">Tổ hợp & môn</button>
-        <button class="dh-tab" data-tab="truong" onclick="switchDHTab('truong')">Trường & điểm</button>
-        <button class="dh-tab" data-tab="nghe" onclick="switchDHTab('nghe')">Cơ hội nghề</button>
-      </div>
-      <div class="dh-tabpane show" data-pane="tohop">
-        <div class="dh-section">
-          <div class="dh-slabel">Tổ hợp xét tuyển đại học</div>
-          <div class="dh-pills">${n.dh.map(d=>{const code=d.split(':')[0].trim();const isStar=code===mainTH;return`<span class="dh-pill${isStar?' dh-pill-star':''}">${d}${isStar?' ★':''}</span>`;}).join('')}</div>
-        </div>
-        <div class="dh-section">
-          <div class="dh-slabel">Môn học cần chú ý từ lớp 10</div>
-          ${n.mon_txt.map(m=>`<div class="dh-mon-row">${m}</div>`).join('')}
-        </div>
-        ${n.warn?`<div style="margin:.25rem 1.25rem .5rem;padding:8px 12px;border-left:2px solid #e24b4a;background:#fff0f0;border-radius:0 8px 8px 0;font-size:12px;color:#a32d2d;line-height:1.5">⚠️ ${n.warn}</div>`:''}
-        <div style="margin:.25rem 1.25rem .75rem;padding:9px 12px;background:#fff0f0;border-left:2px solid #e24b4a;border-radius:0 8px 8px 0;font-size:12px;color:#a32d2d;line-height:1.5">📋 <strong>Quy chế xét học bạ 2026:</strong> Tính cả <strong>6 học kỳ</strong>, đạt tối thiểu <strong>15/30 điểm</strong> ở 3 môn thi TN tương ứng.</div>
-      </div>
-      <div class="dh-tabpane" data-pane="truong">
-        ${(()=>{
-          const mienData=NGANH_TRUONG_MIEN[selN];
-          const allSchools=mienData?[...mienData.B,...mienData.T,...mienData.N]:[];
-          const total=allSchools.length;
-          const diemRange=total>0?{min:Math.min(...allSchools.map(s=>s.diem)),max:Math.max(...allSchools.map(s=>s.diem))}:null;
-          const hpList=allSchools.filter(s=>s.hp>0).map(s=>s.hp);
-          const hpRange=hpList.length>0?{min:Math.min(...hpList),max:Math.max(...hpList)}:null;
-          return`<div class="dh-stat-grid">
-            <div class="dh-stat"><div class="dh-stat-val">${diemRange?diemRange.min.toFixed(1)+'–'+diemRange.max.toFixed(1):'—'}</div><div class="dh-stat-lbl">Điểm chuẩn 2024</div></div>
-            <div class="dh-stat"><div class="dh-stat-val">${hpRange?hpRange.min+'–'+hpRange.max+'tr':'—'}</div><div class="dh-stat-lbl">Học phí/năm</div></div>
-            <div class="dh-stat"><div class="dh-stat-val">${ch?ch.luong:'—'}</div><div class="dh-stat-lbl">Lương sau ra trường</div></div>
-          </div>`;
-        })()}
-        ${(()=>{
-          const mienData=NGANH_TRUONG_MIEN[selN];
-          if(!mienData)return`<div class="dh-section"><p style="font-size:12px;color:var(--text3)">Đang cập nhật dữ liệu trường đào tạo cho ngành này.</p></div>`;
-          const renderCol=(label,list,colorClass)=>{
-            if(list.length===0)return`<div class="mien-col"><div class="mien-head ${colorClass}">${label}<span class="mien-count">0</span></div><div class="mien-empty">Chưa có dữ liệu</div></div>`;
-            const rows=list.map(s=>{
-              const isDN=s.t.includes('Đồng Nai')||s.t.includes('Lạc Hồng');
-              const hpTxt=s.hp>0?s.hp+'tr/năm':'Miễn phí';
-              const dcCls=s.diem>=26?'dh-chip-high':s.diem>=23?'dh-chip-mid':'dh-chip-ok';
-              return`<div class="mien-item${isDN?' mien-item-dn':''}">
-                <div class="mien-item-name">${isDN?'📍 ':''}${s.t}</div>
-                <div class="mien-item-meta">
-                  <span class="mien-tag">${s.th}</span>
-                  <span class="mien-tag ${dcCls}">${s.diem.toFixed(1)}đ</span>
-                  <span class="mien-tag mien-tag-ct">${s.ct} CT</span>
-                  <span class="mien-tag mien-tag-hp">${hpTxt}</span>
-                </div>
-              </div>`;
-            }).join('');
-            return`<div class="mien-col"><div class="mien-head ${colorClass}">${label}<span class="mien-count">${list.length}</span></div><div class="mien-list">${rows}</div></div>`;
-          };
-          return`<div class="dh-section">
-            <div class="dh-slabel" style="margin-bottom:.5rem">Trường đào tạo ngành này trên cả nước &nbsp;<span style="font-weight:400;color:var(--text3);font-size:10px">(${mienData.B.length+mienData.T.length+mienData.N.length}/207 trường) · ★ Khối · Điểm chuẩn 2024 · Chỉ tiêu (CT) · Học phí/năm</span></div>
-            <div class="mien-grid">
-              ${renderCol('🔵 Miền Bắc',mienData.B,'mien-bac')}
-              ${renderCol('🟢 Miền Trung',mienData.T,'mien-trung')}
-              ${renderCol('🟠 Miền Nam',mienData.N,'mien-nam')}
-            </div>
-            <p style="font-size:10px;color:var(--text3);margin-top:6px">📍 = Đồng Nai/Lạc Hồng. Điểm chuẩn, chỉ tiêu, học phí 2024 — chỉ tham khảo định hướng, thay đổi theo đề án tuyển sinh hằng năm.</p>
-          </div>`;
-        })()}
-        <div style="padding:.75rem 1.25rem">
-          <p style="font-size:11px;color:var(--text3);margin-bottom:8px">Học phí, chỉ tiêu cụ thể từng trường thay đổi theo đề án tuyển sinh hằng năm. Liên hệ HNA để được tư vấn cập nhật.</p>
-          <a href="tel:0969374411" class="dh-ts247-btn">📞 Liên hệ HNA tư vấn — 096 937 4411</a>
-        </div>
-        <div class="dh-section">
-          <div class="dh-slabel" style="margin-bottom:.5rem">Tra cứu 207 trường ĐH cả nước &nbsp;<span style="font-weight:400;color:var(--text3);font-size:10px" id="sch207-count">207 / 207 trường</span></div>
-          <input type="text" class="sch207-search" placeholder="Tìm tên trường hoặc mã trường (VD: Bách Khoa, KHA)..." oninput="schoolSearchInput(this.value)">
-          <div class="sch207-filters">
-            <button class="sch207-filter active" onclick="schoolFilterClick('Tất cả',this)">Tất cả</button>
-            <button class="sch207-filter" onclick="schoolFilterClick('Bắc',this)">Miền Bắc</button>
-            <button class="sch207-filter" onclick="schoolFilterClick('Trung',this)">Miền Trung</button>
-            <button class="sch207-filter" onclick="schoolFilterClick('Nam',this)">Miền Nam</button>
-          </div>
-          <div class="sch207-list" id="school207-list"></div>
-        </div>
-      </div>
-      <div class="dh-tabpane" data-pane="nghe">
-        ${ch?`<div class="dh-section"><div class="dh-slabel">Vị trí việc làm phổ biến</div><div>${ch.jobs.map(j=>`<div class="co-hoi-item">${j}</div>`).join('')}</div></div><div class="dh-section"><div class="dh-slabel">Thu nhập & nhu cầu thị trường</div><div class="luong-box"><div><div class="luong-val">${ch.luong}</div><div class="luong-lbl">Mức lương tham khảo</div></div><div style="flex:1;border-left:0.5px solid var(--border);padding-left:10px;font-size:12px;color:#27500a;line-height:1.5">${ch.nhu}</div></div></div>`:`<div class="dh-section"><p style="font-size:12px;color:var(--text3)">Đang cập nhật dữ liệu cơ hội nghề nghiệp cho ngành này.</p></div>`}
-        <div style="padding:.75rem 1.25rem">
-          <a href="tel:0969374411" class="dh-ts247-btn">📞 Liên hệ HNA tư vấn ngành này — 096 937 4411</a>
-        </div>
-      </div>
-    </div>`;
-}
-
-const ALL_SCHOOLS=[
-  {ten:'THPT Ngô Quyền',       tohop:{B00:'Tổ hợp A: Lý, Hóa, Sinh, Tin',A00:'Tổ hợp A: Lý, Hóa, Sinh, Tin',D07:'Tổ hợp A: Lý, Hóa, Sinh, Tin',D01:'Tổ hợp B/C: Hóa,Sinh,GDKTPL,CN hoặc Địa,CN,Tin,GDKTPL',C00:'Tổ hợp C: Địa, CN, Tin, GDKTPL',V00:'Tổ hợp D: Lý, Hóa, Địa, CN'}},
-  {ten:'THPT Trấn Biên',        tohop:{A00:'Tổ hợp A: Lý, Hóa, Tin + 1 môn',B00:'Tổ hợp A: Lý, Hóa, Tin + 1 môn',D01:'Tổ hợp C: Địa, GDKTPL, Tin, CN',C00:'Tổ hợp C: Địa, GDKTPL, Tin, CN'}},
-  {ten:'THPT Chu Văn An',       tohop:{A00:'Tổ hợp A: Lý, Hóa, Sinh, Tin',B00:'Tổ hợp A/B: Lý,Hóa,Sinh,Tin hoặc Lý,Hóa,Sinh,CN CN',D07:'Tổ hợp A: Lý, Hóa, Sinh, Tin',D01:'Tổ hợp C/D: Tin,Địa,GDKTPL,CN CN hoặc CN NN',C00:'Tổ hợp C/D: Tin, Địa, GDKTPL, CN NN'}},
-  {ten:'THPT Lê Hồng Phong',    tohop:{A00:'Cần xác nhận — lehongphongdongnai.edu.vn',B00:'Cần xác nhận — lehongphongdongnai.edu.vn'}},
-  {ten:'THPT Nguyễn Trãi',      tohop:{A00:'Cần xác nhận — SĐT: 0251 3884 351'}},
-  {ten:'THPT Tam Hiệp',         tohop:{A00:'Cần xác nhận — website nhà trường'}},
-  {ten:'THPT Nam Hà',           tohop:{A00:'Cần xác nhận — website nhà trường'}},
-  {ten:'THPT Nguyễn Hữu Cảnh',  tohop:{A00:'Cần xác nhận — website nhà trường'}},
-  {ten:'THPT Long Khánh',       tohop:{A00:'Cần xác nhận — website nhà trường'}},
-  {ten:'THPT Long Thành',       tohop:{A00:'Cần xác nhận — website nhà trường'}},
-  {ten:'THPT Xuân Lộc',         tohop:{A00:'Cần xác nhận — website nhà trường'}},
-];
-
-const CHUNG_TABLE=[
-  // ── NHÓM A: TOÁN – LÝ – HÓA/ANH/TIN ─────────────────────────────────────────────
-  {dh:'A00',mon3:'Toán – Vật lý – Hóa học',     l10:'Chọn tổ hợp có Vật lý + Hóa học',    nganh:'Kỹ thuật, CNTT, Cơ khí, Xây dựng, Hàng không, Hàng hải, Thủy lợi, Khí tượng, CN Vật liệu, Bán dẫn'},
-  {dh:'A01',mon3:'Toán – Vật lý – Tiếng Anh',   l10:'Chọn tổ hợp có Vật lý + Tiếng Anh',  nganh:'CNTT, Kỹ thuật điện tử, Cơ khí, Xây dựng, Hàng không, Ngoại thương, Công an–Quân đội (⭐ nhiều trường kỹ thuật ưu tiên hơn A00)'},
-  {dh:'A02',mon3:'Toán – Vật lý – Sinh học',     l10:'Chọn tổ hợp có Vật lý + Sinh học',   nganh:'Kỹ thuật Y học, KHTN, Y tế cộng đồng, Môi trường'},
-  {dh:'X06',mon3:'Toán – Vật lý – Tin học',      l10:'Chọn tổ hợp có Vật lý + Tin học',   nganh:'CNTT, An toàn mạng, Hàng không (chính thức 2026 — ĐH Công Nghệ ĐHQG HN)'},
-  // ── NHÓM B: TOÁN – HÓA – SINH/ANH ────────────────────────────────────────────
-  {dh:'B00',mon3:'Toán – Hóa học – Sinh học',    l10:'Chọn tổ hợp có Hóa học + Sinh học',  nganh:'Y – Dược, Bác sĩ thú y, CN Sinh–Hóa, CN Thực phẩm, Nông–Lâm–Thủy sản'},
-  {dh:'B03',mon3:'Toán – Sinh học – Ngữ văn',    l10:'Chọn tổ hợp có Sinh học',            nganh:'Bác sĩ thú y, Nông–Lâm–Thủy sản'},
-  {dh:'B08',mon3:'Toán – Sinh học – Tiếng Anh',  l10:'Chọn tổ hợp có Sinh học + Tiếng Anh', nganh:'Điều dưỡng, Y tế cộng đồng, Dinh dưỡng, CN Sinh học'},
-  // ── NHÓM C: NGỮ VĂN – CÁC KẾT HỢP ───────────────────────────────────────────
-  {dh:'C00',mon3:'Ngữ văn – Lịch sử – Địa lý',  l10:'Chọn tổ hợp có Địa lý + Lịch sử',   nganh:'Luật, Sư phạm KHXH, Báo chí, Tâm lý, Du lịch, Mỹ thuật – Âm nhạc'},
-  {dh:'C01',mon3:'Ngữ văn – Toán – Vật lý',      l10:'Chọn tổ hợp có Vật lý',              nganh:'Điện–Điện tử, Hàng hải, CN In–Giấy, Mỏ–Địa chất, Xây dựng'},
-  {dh:'C02',mon3:'Ngữ văn – Toán – Hóa học',     l10:'Chọn tổ hợp có Hóa học',             nganh:'Hóa học, CN Thực phẩm, Môi trường, Dược học (một số trường)'},
-  {dh:'C03',mon3:'Ngữ văn – Toán – Lịch sử',     l10:'Chọn tổ hợp có Lịch sử',             nganh:'Tâm lý học, Quân đội–Chính trị, Luật'},
-  {dh:'C04',mon3:'Ngữ văn – Toán – Địa lý',      l10:'Chọn tổ hợp có Địa lý',              nganh:'Du lịch, Khách sạn, Sư phạm Địa lý, Kinh tế'},
-  // ── NHÓM D01: TOÁN – VĂN – TIẾNG ANH (PHỔ BIẾN NHẤT) ─────────────────────────
-  {dh:'D01',mon3:'Toán – Ngữ văn – Tiếng Anh',   l10:'Học Tiếng Anh tốt từ lớp 10',        nganh:'Kinh tế, QTKD, Luật, Du lịch, Báo chí, Ngoại giao, Sư phạm, Tâm lý'},
-  {dh:'D07',mon3:'Toán – Hóa học – Tiếng Anh',   l10:'Chọn tổ hợp có Hóa học + Tiếng Anh', nganh:'Tài chính, Ngân hàng, Kế toán, Ngoại thương, CN Thực phẩm (dùng chung nhiều ngành)'},
-  {dh:'D09',mon3:'Toán – Lịch sử – Tiếng Anh',   l10:'Học Tiếng Anh + chọn tổ hợp có Lịch sử', nganh:'Ngoại giao, Kinh tế, Luật, Sư phạm Lịch sử'},
-  {dh:'D10',mon3:'Toán – Địa lý – Tiếng Anh',    l10:'Học Tiếng Anh + chọn tổ hợp có Địa lý',  nganh:'Du lịch, Địa lý học, Kinh tế, Ngoại giao'},
-  // ── NHÓM D NGOẠI NGỮ: VĂN – TOÁN – NGOẠI NGỮ ──────────────────────────────
-  {dh:'D04',mon3:'Ngữ văn – Toán – Tiếng Trung',  l10:'Học Tiếng Trung tốt từ lớp 10',     nganh:'Tiếng Trung, Ngoại ngữ, Kinh doanh QT, Du lịch Trung Quốc'},
-  {dh:'D06',mon3:'Ngữ văn – Toán – Tiếng Nhật',   l10:'Học Tiếng Nhật tốt từ lớp 10',      nganh:'Tiếng Nhật, Ngoại ngữ, Kinh doanh với Nhật Bản'},
-  {dh:'D03',mon3:'Ngữ văn – Toán – Tiếng Pháp',   l10:'Học Tiếng Pháp tốt từ lớp 10',      nganh:'Tiếng Pháp, Ngoại ngữ, Quan hệ QT'},
-  {dh:'D02',mon3:'Ngữ văn – Toán – Tiếng Nga',    l10:'Học Tiếng Nga tốt từ lớp 10',       nganh:'Tiếng Nga, Ngoại ngữ, Quan hệ QT'},
-  {dh:'D05',mon3:'Ngữ văn – Toán – Tiếng Đức',    l10:'Học Tiếng Đức tốt từ lớp 10',       nganh:'Tiếng Đức, Ngoại ngữ, Quan hệ QT'},
-  // ── NHÓM D NGOẠI NGỮ: TOÁN – LÝ/HÓA – NGOẠI NGỮ ──────────────────────────
-  {dh:'D28',mon3:'Toán – Vật lý – Tiếng Nhật',    l10:'Chọn tổ hợp có Vật lý + Tiếng Nhật', nganh:'KT điện tử, CNTT hướng Nhật Bản'},
-  {dh:'D29',mon3:'Toán – Vật lý – Tiếng Pháp',    l10:'Chọn tổ hợp có Vật lý + Tiếng Pháp', nganh:'Kỹ thuật, CNTT hướng Pháp ngữ'},
-  {dh:'D26',mon3:'Toán – Vật lý – Tiếng Đức',     l10:'Chọn tổ hợp có Vật lý + Tiếng Đức',  nganh:'Kỹ thuật, CNTT hướng Đức'},
-  {dh:'D23',mon3:'Toán – Hóa học – Tiếng Nhật',   l10:'Chọn tổ hợp có Hóa học + Tiếng Nhật', nganh:'Hóa học, CN Thực phẩm hướng Nhật Bản'},
-  {dh:'D24',mon3:'Toán – Hóa học – Tiếng Pháp',   l10:'Chọn tổ hợp có Hóa học + Tiếng Pháp', nganh:'Hóa học, CN Thực phẩm hướng Pháp ngữ'},
-  // ── NHÓM D14/D15: VĂN – SỬ/ĐỊA – ANH ──────────────────────────────────
-  {dh:'D14',mon3:'Ngữ văn – Lịch sử – Tiếng Anh', l10:'Học Tiếng Anh + chọn tổ hợp có Lịch sử', nganh:'Ngoại giao, Ngoại ngữ, QH Quốc tế, Sư phạm'},
-  {dh:'D15',mon3:'Ngữ văn – Địa lý – Tiếng Anh',  l10:'Học Tiếng Anh + chọn tổ hợp có Địa lý',  nganh:'Ngoại giao, Du lịch, Khách sạn, Địa lý'},
-  // ── NHÓM X: TỔ HỢP GDKTPL (CHƯƠNG TRÌNH 2018 MỚI) ────────────────────────────────
-  {dh:'X01',mon3:'Ngữ văn – Toán – GDKTPL',       l10:'Chọn tổ hợp có GDKTPL',              nganh:'Thiết kế đồ họa, Game, Đa phương tiện, Kinh tế, Luật'},
-  {dh:'X21',mon3:'Toán – Địa lý – GDKTPL',         l10:'Chọn tổ hợp có Địa lý + GDKTPL',   nganh:'Du lịch, Kinh tế, Quản lý đất đai, Địa lý'},
-  {dh:'X70',mon3:'Ngữ văn – Lịch sử – GDKTPL',    l10:'Chọn tổ hợp có Lịch sử + GDKTPL',  nganh:'Luật, KHXH, Sư phạm, Văn hóa–Chính trị'},
-  {dh:'X74',mon3:'Ngữ văn – Địa lý – GDKTPL',     l10:'Chọn tổ hợp có Địa lý + GDKTPL',   nganh:'Du lịch, Địa lý, KHXH, Sư phạm Địa lý'},
-  {dh:'X78',mon3:'Ngữ văn – GDKTPL – Tiếng Anh',  l10:'Học Tiếng Anh + chọn tổ hợp có GDKTPL', nganh:'Truyền thông đa phương tiện, Luật QT, Kinh tế, Ngôn ngữ'},
-  // ── NHÓM V: VẼ KỸ THUẬT ──────────────────────────────────────────────────────────────────
-  {dh:'V00',mon3:'Toán – Vẽ kỹ thuật – Vật lý',   l10:'Học Vẽ KT riêng ngoài trường',      nganh:'Kiến trúc, Quy hoạch đô thị, Thiết kế nội thất'},
-  // ── NHÓM H: NĂNG KHIẾU MỸ THUẬT ─────────────────────────────────────────────────
-  {dh:'H00',mon3:'Ngữ văn – NK Vẽ 1 – NK Vẽ 2',  l10:'Luyện năng khiếu vẽ từ lớp 10',     nganh:'Mỹ thuật, Thiết kế đồ họa (thi năng khiếu riêng)'},
-  {dh:'H01',mon3:'Ngữ văn – NK Vẽ 1 – Toán',      l10:'Luyện năng khiếu vẽ từ lớp 10',     nganh:'Mỹ thuật ứng dụng, Kiến trúc (một số trường)'},
-  // ── NHÓM N: NĂNG KHIẾU ÂM NHẠC ──────────────────────────────────────────────────
-  {dh:'N00',mon3:'Ngữ văn – Hòa âm – Hát',        l10:'Luyện âm nhạc chuyên sâu từ sớm',   nganh:'Âm nhạc, Biểu diễn, Thanh nhạc, SP Âm nhạc'},
-  {dh:'N01',mon3:'Ngữ văn – Đàn – Nhạc lý',        l10:'Luyện âm nhạc chuyên sâu từ sớm',   nganh:'Biểu diễn nhạc cụ, Âm nhạc học'},
-  // ── NHÓM T: NĂNG KHIẾU TDTT ───────────────────────────────────────────────────────
-  {dh:'T00',mon3:'Toán – Sinh học – NK TDTT',       l10:'Rèn luyện thể thao chuyên sâu',      nganh:'Thể dục – Thể thao (thi năng khiếu TDTT riêng)'},
-  {dh:'T01',mon3:'Toán – Ngữ văn – NK TDTT',        l10:'Rèn luyện thể thao chuyên sâu',      nganh:'Giáo dục thể chất, Huấn luyện thể thao'},
-  {dh:'T02',mon3:'Ngữ văn – Sinh học – NK TDTT',    l10:'Rèn luyện thể thao chuyên sâu',      nganh:'Thể dục – Thể thao, Y học thể thao'},
-  // ── NHÓM Q: ĐÁNH GIÁ TƯ DUY ───────────────────────────────────────────────────────────────
-  {dh:'Q00',mon3:'Tư duy định lượng – Định tính – KH/Tiếng Anh', l10:'Ôn đề thi ĐGTD riêng', nganh:'Công an – Quân đội (thi Đánh giá tư duy BCA)'},
-  // ── B08/D08: SINH – ANH ─────────────────────────────────────────────────────────────────
-  {dh:'D08',mon3:'Toán – Sinh học – Tiếng Anh',     l10:'Chọn tổ hợp có Sinh học + Tiếng Anh', nganh:'Điều dưỡng, Y tế cộng đồng, CN Sinh học'},
-  // ── BỔ SUNG ĐỦ TOP 50 ──────────────────────────────────────────────────────────────────
-  {dh:'D27',mon3:'Toán – Vật lý – Tiếng Nga',       l10:'Chọn tổ hợp có Vật lý + Tiếng Nga',  nganh:'Kỹ thuật, Khoa học tự nhiên, Ngoại ngữ Nga'},
-  {dh:'A08',mon3:'Toán – Vật lý – Hóa học – Tiếng Anh', l10:'Chọn tổ hợp có Vật lý + Hóa học', nganh:'CNTT, Kỹ thuật (chương trình quốc tế một số trường)'},
-  {dh:'D11',mon3:'Ngữ văn – Sinh học – Tiếng Anh',  l10:'Chọn tổ hợp có Sinh học + Tiếng Anh', nganh:'Điều dưỡng, Y tế cộng đồng, SP Sinh học'},
-  {dh:'C15',mon3:'Ngữ văn – Toán – Tiếng Anh',      l10:'Học Tiếng Anh tốt (thang điểm Anh văn)', nganh:'SP Tiếng Anh, Ngoại ngữ, Kinh tế (một số trường)'},
-  {dh:'X25',mon3:'Toán – Hóa học – GDKTPL',         l10:'Chọn tổ hợp có Hóa học + GDKTPL',    nganh:'Kinh tế, Tài chính, CN Thực phẩm (tổ hợp mới 2025)'},
-  {dh:'X26',mon3:'Toán – Sinh học – GDKTPL',         l10:'Chọn tổ hợp có Sinh học + GDKTPL',   nganh:'Nông nghiệp, Môi trường, Y tế cộng đồng (tổ hợp mới 2025)'},
-  {dh:'X35',mon3:'Toán – Lịch sử – GDKTPL',          l10:'Chọn tổ hợp có Lịch sử + GDKTPL',   nganh:'Luật, Hành chính, KHXH (tổ hợp mới 2025)'},
-];
-
-function buildSchool(){
-  const n=NGANH.find(x=>x.id===selN);if(!n)return;
-  document.getElementById('school-input').value='';
-  document.getElementById('school-search-result').innerHTML='';
-  document.getElementById('school-result').innerHTML=`
-    <div class="rcard hl">
-      <div class="rl">Môn lựa chọn cần đăng ký khi nhập học lớp 10</div>
-      <div class="tags" style="margin-top:6px">${n.tohop_l10.map(t=>`<span class="tag tag-amber">${t}</span>`).join('')}</div>
-      <div class="divider"></div>
-      <div class="rl">Lưu ý quan trọng</div>
-      <div class="cdung">Môn bạn chọn ở lớp 10 sẽ học xuyên suốt 10–11–12 và quyết định trực tiếp tổ hợp thi tốt nghiệp + xét tuyển đại học. Chọn sai rất khó sửa — hãy quyết định kỹ!</div>
-      ${n.warn?`<div class="warn-box">⚠️ ${n.warn}</div>`:''}
-    </div>`;
-  buildChung();
-}
-
-function searchSchool(val){
-  const n=NGANH.find(x=>x.id===selN);
-  const mainKey=n?n.dh[0].split(':')[0].trim():'A00';
-  const box=document.getElementById('school-search-result');
-  const q=val.trim().toLowerCase();
-  if(q.length<2){box.innerHTML='';return;}
-  const found=ALL_SCHOOLS.filter(s=>s.ten.toLowerCase().includes(q));
-  if(found.length===0){
-    box.innerHTML=`<div class="school-notfound">
-      Không tìm thấy "<strong>${val}</strong>" trong dữ liệu.<br>
-      Xem bảng tổ hợp chung bên dưới để biết môn cần chọn, hoặc liên hệ HNA để được tư vấn trực tiếp cho trường của bạn.
-    </div>`;
-  } else {
-    box.innerHTML=found.map(s=>{
-      const info=s.tohop[mainKey]||'Cần xác nhận thêm với nhà trường';
-      return`<div class="school-found">
-        <strong>${s.ten}</strong><br>
-        Tổ hợp phù hợp: ${info}
-      </div>`;
-    }).join('');
-  }
-}
-
-function buildChung(){
-  const n=NGANH.find(x=>x.id===selN);
-
-  // Tính mainKey thông minh: nếu HS đã chọn 2 môn thi TN → so khớp với dh array
-  let mainKey='';
-  if(n){
-    if(selTnMons&&selTnMons.length===2){
-      // Tổ hợp = Toán + Văn + 2 môn TN — so khớp với dh array
-      const monIds=selTnMons.map(m=>m.id);
-      const TH_MON_MAP={
-        'A00':['ly','hoa'],'A01':['ly'],'B00':['hoa','sinh'],
-        'D07':['hoa'],'C00':['dia','su'],'D01':[],'X06':['ly','tin'],
-        'B03':['sinh'],'C04':['dia'],'D14':['su'],'D15':['dia'],
-        'C00':['dia','su'],'C03':['su'],
-      };
-      // Tìm tổ hợp trong dh array khớp nhiều nhất với môn thi TN
-      let bestCode='', bestScore=-1;
-      n.dh.forEach(d=>{
-        const code=d.split(':')[0].trim();
-        const needed=TH_MON_MAP[code]||[];
-        const score=needed.filter(m=>monIds.includes(m)).length - needed.filter(m=>!monIds.includes(m)).length;
-        if(score>bestScore){bestScore=score;bestCode=code;}
-      });
-      mainKey=bestCode||n.dh[0].split(':')[0].trim();
-    } else {
-      mainKey=n.dh[0].split(':')[0].trim();
-    }
-  }
-
-  const NGANH_DETAIL={
-    'A00':{nganh_chi:'Kỹ thuật cơ khí, Kỹ thuật điện–điện tử, CNTT, Xây dựng, Hàng không, Hàng hải, Thủy lợi, Khí tượng–Thủy văn, CN Bán dẫn, Vật liệu, Môi trường',truong:'ĐH Bách Khoa HN/HCM, ĐH SP Kỹ Thuật HCM, ĐH Công Nghiệp HN/HCM, ĐH Hàng Hải VN, ĐH Thủy Lợi, ĐH Lạc Hồng'},
-    'A01':{nganh_chi:'CNTT, Kỹ thuật điện tử, Cơ khí, Xây dựng, Hàng không, Ngoại thương, Công an–Quân đội ⭐ Xu hướng 2025–2026: nhiều trường kỹ thuật mở rộng xét A01 hơn A00 — nên ưu tiên giữ Tiếng Anh tốt',truong:'ĐH Bách Khoa HN/HCM, ĐH CNTT HCM, FPT University, ĐH Ngoại Thương, HV Cảnh Sát ND'},
-    'B00':{nganh_chi:'Y khoa, Dược học, Điều dưỡng, RHM, CN Sinh–Hóa, Nông–Lâm–Thủy sản',truong:'ĐH Y Dược HCM, ĐH Y HN, ĐH Y Dược Huế, ĐH Nông Lâm HCM, ĐH Y khoa Phạm Ngọc Thạch'},
-    'D01':{nganh_chi:'Kinh tế, QTKD, Luật, Du lịch, Báo chí, Ngoại giao, Sư phạm, Tâm lý',truong:'ĐH Kinh Tế QD, ĐH Kinh Tế HCM (UEH), ĐH Ngoại Thương, ĐH Luật HN/HCM, ĐH KHXH&NV'},
-    'D07':{nganh_chi:'Tài chính, Ngân hàng, Kế toán, Kiểm toán, Ngoại thương, CN Thực phẩm',truong:'HV Tài Chính, HV Ngân Hàng, ĐH Kinh Tế QD, ĐH Kinh Tế HCM (UEH), ĐH Ngoại Thương'},
-    'C00':{nganh_chi:'Luật, Sư phạm KHXH, Báo chí–Truyền thông, Tâm lý, Du lịch, Mỹ thuật–Âm nhạc',truong:'ĐH Luật HN/HCM, ĐH KHXH&NV HN/HCM, HV Báo Chí, ĐH SP HN/HCM'},
-    'X06':{nganh_chi:'CNTT, An toàn mạng, KT Phần mềm (tổ hợp MỚI từ 2025)',truong:'ĐH Công Nghệ–ĐHQG HN, ĐH Bách Khoa HN, ĐH CNTT HCM'},
-    'X01':{nganh_chi:'Thiết kế đồ họa, Game, Đa phương tiện',truong:'ĐH Mỹ Thuật VN/HCM, FPT University, ĐH Văn Lang, ĐH HUTECH'},
-    'V00':{nganh_chi:'Kiến trúc, Quy hoạch đô thị, Thiết kế nội thất',truong:'ĐH Kiến Trúc HN/HCM, ĐH Xây Dựng HN'},
-    'B03':{nganh_chi:'Bác sĩ thú y, Nông–Lâm–Thủy sản',truong:'ĐH Nông Lâm HCM/HN, ĐH Nha Trang, ĐH Cần Thơ'},
-    'C04':{nganh_chi:'Du lịch–Khách sạn, Sư phạm Địa lý',truong:'ĐH Hoa Sen, ĐH Văn Lang, ĐH Đà Lạt, ĐH KHXH&NV HCM'},
-    'D14':{nganh_chi:'Ngoại giao, Ngoại ngữ',truong:'HV Ngoại Giao, ĐH Ngoại Ngữ–ĐHQG HN, ĐH Hà Nội'},
-    'D15':{nganh_chi:'Ngoại giao, Du lịch–Lữ hành',truong:'HV Ngoại Giao, ĐH Đà Lạt, ĐH KHXH&NV HCM'},
-    'C01':{nganh_chi:'Điện–Điện tử, Hàng hải, Mỏ–Địa chất',truong:'ĐH Bách Khoa HN/HCM, ĐH Hàng Hải VN'},
-    'C03':{nganh_chi:'Tâm lý, Quân đội Chính trị',truong:'ĐH KHXH&NV HN, Trường Sĩ Quan Chính Trị'},
-    'H00':{nganh_chi:'Mỹ thuật, Thiết kế đồ họa (thi năng khiếu)',truong:'ĐH Mỹ Thuật VN, ĐH Mỹ Thuật HCM, ĐH Kiến Trúc'},
-    'T00':{nganh_chi:'Thể dục–Thể thao (thi năng khiếu)',truong:'ĐH SP TDTT HN, ĐH SP TDTT HCM'},
-    'T01':{nganh_chi:'Thể dục–Thể thao (thi năng khiếu)',truong:'ĐH SP TDTT HN, ĐH SP TDTT ĐN'},
-    'A02':{nganh_chi:'Kỹ thuật Y học, Khoa học tự nhiên, Y tế cộng đồng',truong:'ĐH Bách Khoa HN/HCM, ĐH Khoa học TN HN/HCM'},
-    'B08':{nganh_chi:'Điều dưỡng, Dinh dưỡng, Y tế cộng đồng, CN Sinh học',truong:'ĐH Y Dược HCM, ĐH Y HN, ĐH Nông Lâm HCM'},
-    'C02':{nganh_chi:'Hóa học, CN Thực phẩm, Môi trường, Dược (một số trường)',truong:'ĐH Khoa học TN HN/HCM, ĐH Bách Khoa HN/HCM'},
-    'D09':{nganh_chi:'Ngoại giao, Kinh tế, Luật, Sư phạm Lịch sử',truong:'HV Ngoại Giao, ĐH KHXH&NV HN/HCM, ĐH Luật HN'},
-    'D10':{nganh_chi:'Du lịch, Địa lý học, Kinh tế, Ngoại giao',truong:'ĐH KHXH&NV HN/HCM, ĐH Đà Lạt, ĐH Hoa Sen'},
-    'D08':{nganh_chi:'Điều dưỡng, Y tế cộng đồng, CN Sinh học',truong:'ĐH Y Dược HCM, ĐH Y HN, ĐH Nông Lâm HCM'},
-    'D04':{nganh_chi:'Tiếng Trung, Ngoại ngữ, Kinh doanh QT',truong:'ĐH Ngoại Ngữ ĐHQG HN, ĐH KHXH&NV HCM, ĐH Hà Nội'},
-    'D06':{nganh_chi:'Tiếng Nhật, Ngoại ngữ, Kinh doanh với Nhật Bản',truong:'ĐH Ngoại Ngữ ĐHQG HN, ĐH KHXH&NV HCM'},
-    'D03':{nganh_chi:'Tiếng Pháp, Ngoại ngữ, Quan hệ QT',truong:'ĐH Ngoại Ngữ ĐHQG HN, ĐH Hà Nội'},
-    'D02':{nganh_chi:'Tiếng Nga, Ngoại ngữ, Quan hệ QT',truong:'ĐH Ngoại Ngữ ĐHQG HN'},
-    'D05':{nganh_chi:'Tiếng Đức, Ngoại ngữ, Quan hệ QT',truong:'ĐH Ngoại Ngữ ĐHQG HN'},
-    'D27':{nganh_chi:'Kỹ thuật, Khoa học tự nhiên, Ngoại ngữ Nga',truong:'ĐH Bách Khoa HN, ĐH Ngoại Ngữ ĐHQG HN'},
-    'D28':{nganh_chi:'Kỹ thuật điện tử, CNTT hướng Nhật Bản',truong:'ĐH Bách Khoa HN, FPT University'},
-    'D29':{nganh_chi:'Kỹ thuật, CNTT hướng Pháp ngữ',truong:'ĐH Bách Khoa HN'},
-    'D26':{nganh_chi:'Kỹ thuật, CNTT hướng Đức',truong:'ĐH Bách Khoa HN'},
-    'D23':{nganh_chi:'Hóa học, CN Thực phẩm hướng Nhật Bản',truong:'ĐH Bách Khoa HN'},
-    'D24':{nganh_chi:'Hóa học, CN Thực phẩm hướng Pháp ngữ',truong:'ĐH Bách Khoa HN'},
-    'X21':{nganh_chi:'Du lịch, Kinh tế, Quản lý đất đai, Địa lý',truong:'ĐH Đà Lạt, ĐH Hoa Sen, ĐH Tài Nguyên Môi Trường'},
-    'X70':{nganh_chi:'Luật, KHXH, Sư phạm, Văn hóa–Chính trị',truong:'ĐH Luật HN/HCM, ĐH KHXH&NV HN/HCM'},
-    'X74':{nganh_chi:'Du lịch, Địa lý, KHXH, Sư phạm Địa lý',truong:'ĐH KHXH&NV HN/HCM, ĐH Đà Lạt'},
-    'X78':{nganh_chi:'Truyền thông đa phương tiện, Luật QT, Kinh tế',truong:'HV Báo Chí, ĐH KHXH&NV HCM, ĐH Ngoại Thương'},
-    'X25':{nganh_chi:'Kinh tế, Tài chính, CN Thực phẩm',truong:'Nhiều trường đang cập nhật đề án 2026'},
-    'X26':{nganh_chi:'Nông nghiệp, Môi trường, Y tế cộng đồng',truong:'ĐH Nông Lâm HCM, ĐH Tài Nguyên Môi Trường'},
-    'X35':{nganh_chi:'Luật, Hành chính, KHXH',truong:'ĐH Luật HN/HCM, ĐH KHXH&NV HN/HCM'},
-    'H01':{nganh_chi:'Mỹ thuật ứng dụng, Kiến trúc (một số trường)',truong:'ĐH Mỹ Thuật Công Nghiệp HN, ĐH Kiến Trúc HN/HCM'},
-    'N00':{nganh_chi:'Âm nhạc, Biểu diễn, Thanh nhạc, SP Âm nhạc',truong:'HV Âm Nhạc QG VN, ĐH Sân Khấu Điện Ảnh HN/HCM'},
-    'N01':{nganh_chi:'Biểu diễn nhạc cụ, Âm nhạc học',truong:'HV Âm Nhạc QG VN, ĐH Sân Khấu Điện Ảnh'},
-    'T02':{nganh_chi:'Thể dục–Thể thao, Y học thể thao',truong:'ĐH SP TDTT HN, ĐH SP TDTT HCM'},
-    'Q00':{nganh_chi:'Công an–Quân đội (thi Đánh giá tư duy BCA)',truong:'HV Cảnh Sát ND, HV An Ninh ND'},
-  };
-
-  const cards=CHUNG_TABLE.map((r,i)=>{
-    const isMain=r.dh===mainKey;
-    const detail=NGANH_DETAIL[r.dh]||{nganh_chi:r.nganh,truong:'Liên hệ HNA: 096 937 4411 để được tư vấn cụ thể'};
-    const uid=`acc-${i}`;
-    return`<div class="acc-item${isMain?' acc-main':''}" id="${uid}">
-      <button class="acc-head" onclick="toggleAcc('${uid}')" aria-expanded="false">
-        <span class="acc-code${isMain?' acc-code-main':''}">${r.dh}${isMain?' ★':''}</span>
-        <span class="acc-mon3">${r.mon3}</span>
-        <span class="acc-chevron">▾</span>
-      </button>
-      <div class="acc-body" hidden>
-        <div class="acc-row"><span class="acc-label">Môn cần chọn lớp 10</span><span class="acc-val accent">${r.l10}</span></div>
-        <div class="acc-row"><span class="acc-label">Nhóm ngành phù hợp</span><span class="acc-val">${detail.nganh_chi}</span></div>
-        <div class="acc-row"><span class="acc-label">Trường đào tạo tiêu biểu</span><span class="acc-val muted">${detail.truong}</span></div>
-        ${isMain?`<div class="acc-highlight">★ Tổ hợp phù hợp với ngành <strong>${n?.ten||''}</strong> bạn đã chọn</div>`:''}
-      </div>
-    </div>`;
-  }).join('');
-
-  document.getElementById('chung-result').innerHTML=`
-    <div class="rcard" style="margin-bottom:1rem">
-      <div class="rl">Bảng tổ hợp chung — bấm vào tổ hợp để xem chi tiết</div>
-      <p style="font-size:12px;color:var(--text3);margin:4px 0 10px">★ = tổ hợp ĐH phù hợp với ngành bạn đã chọn · Áp dụng cho mọi trường THPT</p>
-      <div class="acc-list">${cards}</div>
-    </div>
-    <div class="hna-cta">
-      <div class="hna-cta-txt">
-        <div class="title">Cần tư vấn riêng cho từng học sinh?</div>
-        <div class="sub">Liên hệ Hướng Nghiệp Alpha để được tư vấn chuyên sâu, cá nhân hóa theo năng lực, mục tiêu và định hướng phù hợp.</div>
-      </div>
-      <a href="tel:0969374411" class="btn-amber">📞 Gọi ngay 096 937 4411</a>
-    </div>`;
-
-  // Auto mở tổ hợp chủ lực
-  if(mainKey){
-    const mainEl=document.querySelector('.acc-main');
-    if(mainEl){
-      const btn=mainEl.querySelector('.acc-head');
-      const body=mainEl.querySelector('.acc-body');
-      if(btn&&body){body.hidden=false;btn.setAttribute('aria-expanded','true');btn.classList.add('open');}
-    }
-  }
-}
-
-function toggleAcc(uid){
-  const item=document.getElementById(uid);
-  if(!item)return;
-  const btn=item.querySelector('.acc-head');
-  const body=item.querySelector('.acc-body');
-  const isOpen=!body.hidden;
-  body.hidden=isOpen;
-  btn.setAttribute('aria-expanded',String(!isOpen));
-  btn.classList.toggle('open',!isOpen);
-}
-
-
-function goStep(s){
-  if(s>=2&&selT.size<2)return;
-  if(s>=3&&!selN)return;
-  document.getElementById('flow-bar').style.display='flex';
-  [1,2,3,4].forEach(i=>{
-    document.getElementById('panel'+i).className='panel'+(i===s?' show':'');
-    const f=document.getElementById('fs'+i);
-    f.className='flow-step'+(i===s?' active':i<s?' done':'');
-  });
-  if(s===2)buildNganh();
-  if(s===3)buildDH();
-  if(s===4){buildSchool();buildMonChips();}
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-
-function resetAll(){
-  selT.clear();selN=null;selMons=[];saOpenId=null;
-  document.querySelectorAll('.tbtn').forEach(b=>b.classList.remove('sel'));
-  document.getElementById('sbar-txt').textContent='Chưa chọn gì — hãy chọn ít nhất 2 mô tả bản thân';
-  document.getElementById('sbar-cnt').textContent='0';
-  document.getElementById('btn12').disabled=true;
-  goStep(1);
-}
-
-const ALL_MONS=[
-  {id:'ly',    label:'Vật lý'},
-  {id:'hoa',   label:'Hóa học'},
-  {id:'sinh',  label:'Sinh học'},
-  {id:'tin',   label:'Tin học'},
-  {id:'dia',   label:'Địa lý'},
-  {id:'su',    label:'Lịch sử'},
-  {id:'gdktpl',label:'GD KT&PL'},
-  {id:'cn_cn', label:'CN Công nghiệp'},
-  {id:'cn_nn', label:'CN Nông nghiệp'},
-  {id:'am',    label:'Âm nhạc'},
-  {id:'mt',    label:'Mỹ thuật'},
-];
-
-let selMons=[];
-
-function buildMonChips(){
-  selMons=[];
-  document.getElementById('match-result').innerHTML='';
-  document.getElementById('send-form').style.display='none';
-  const el=document.getElementById('mon-chips');
-  el.innerHTML=ALL_MONS.map(m=>
-    `<button class="mon-chip" id="mc-${m.id}" onclick="toggleMon('${m.id}','${m.label}')">${m.label}</button>`
-  ).join('');
-  renderSlots();
-}
-
-function toggleMon(id,label){
-  const idx=selMons.findIndex(m=>m.id===id);
-  const btn=document.getElementById('mc-'+id);
-  if(idx>=0){
-    selMons.splice(idx,1);
-    btn.classList.remove('picked');
-  } else {
-    if(selMons.length>=4){
-      const first=selMons.shift();
-      document.getElementById('mc-'+first.id)?.classList.remove('picked');
-    }
-    selMons.push({id,label});
-    btn.classList.add('picked');
-  }
-  renderSlots();
-}
-
-function renderSlots(){
-  const box=document.getElementById('tohop-slots');
-  const btn=document.getElementById('btn-check');
-  const tnSection=document.getElementById('tn-section');
-  if(selMons.length===0){
-    box.innerHTML='<span class="slots-hint">Chọn môn bên trên để thêm vào đây...</span>';
-    btn.disabled=true;btn.style.opacity='.4';
-    tnSection.classList.add('hidden');
-  } else {
-    box.innerHTML=selMons.map(m=>`
-      <span class="slot-tag">${m.label}
-        <button onclick="toggleMon('${m.id}','${m.label}')" aria-label="Xóa ${m.label}">×</button>
-      </span>`).join('');
-    const ready=selMons.length>=2;
-    btn.disabled=!ready;btn.style.opacity=ready?'1':'.4';
-    if(selMons.length>=2){
-      tnSection.classList.remove('hidden');
-      buildTnChips();
-    } else {
-      tnSection.classList.add('hidden');
-    }
-  }
-}
-
-let selTnMons=[];
-
-function buildTnChips(){
-  selTnMons=[];
-  document.getElementById('tohop-xettuyen-result').innerHTML='';
-  document.getElementById('tn-summary-bar').style.display='none';
-  const el=document.getElementById('tn-chips');
-  el.innerHTML=selMons.map(m=>
-    `<button class="tn-chip" id="tn-${m.id}" onclick="toggleTnMon('${m.id}','${m.label}')">${m.label}</button>`
-  ).join('');
-}
-
-function toggleTnMon(id,label){
-  const idx=selTnMons.findIndex(m=>m.id===id);
-  const btn=document.getElementById('tn-'+id);
-  if(idx>=0){
-    selTnMons.splice(idx,1);
-    btn.classList.remove('picked');
-  } else {
-    if(selTnMons.length>=2){
-      const first=selTnMons.shift();
-      document.getElementById('tn-'+first.id)?.classList.remove('picked');
-    }
-    selTnMons.push({id,label});
-    btn.classList.add('picked');
-  }
-  renderTnResult();
-}
-
-const TO_HOP_MAP={
-  'ly-hoa':'A00','ly-tin':'X06','ly-sinh':'A02',
-  'hoa-sinh':'B00','hoa-gdktpl':'X25',
-  'dia-su':'C00','dia-gdktpl':'X74',
-  'su-gdktpl':'X70',
-  'ly-gdktpl':'X06','hoa-tin':'',
-  'sinh-tin':'','sinh-dia':'','sinh-su':'B03','sinh-gdktpl':'X26',
-};
-
-const TH_NGANH_MAP={
-  'A00':'Kỹ thuật, CNTT, Cơ khí, Y–Dược, Xây dựng',
-  'A01':'CNTT quốc tế, Kỹ thuật điện tử, Ngoại thương',
-  'A02':'Kỹ thuật Y học, Khoa học tự nhiên',
-  'X06':'CNTT, An toàn mạng (chính thức 2026)',
-  'B00':'Y khoa, Dược, Điều dưỡng, Nông–Lâm–Thủy sản',
-  'B03':'Nông–Lâm, Bác sĩ thú y',
-  'X25':'Kinh tế, Tài chính, CN Thực phẩm (mới 2025)',
-  'X26':'Nông nghiệp, Môi trường, Y tế cộng đồng (mới 2025)',
-  'C00':'Luật, Sư phạm XH, Báo chí, Tâm lý, Ngoại giao',
-  'X70':'Luật, KHXH, Sư phạm, Văn hóa–Chính trị, Công tác xã hội',
-  'X74':'Du lịch, Địa lý, KHXH, Sư phạm Địa lý',
-};
-
-function renderTnResult(){
-  const bar=document.getElementById('tn-summary-bar');
-  const resEl=document.getElementById('tohop-xettuyen-result');
-
-  // Cập nhật progress
-  const prog=document.getElementById('tn-progress');
-  const hint=document.getElementById('tn-hint');
-  if(prog) prog.textContent=`${selTnMons.length} / 2 môn`;
-  if(hint){
-    if(selTnMons.length===0) hint.textContent='← bấm vào môn bên dưới để chọn';
-    else if(selTnMons.length===1) hint.textContent='Chọn thêm 1 môn nữa để xem sơ đồ';
-    else hint.textContent='✓ Đủ 2 môn — sơ đồ hiện bên dưới';
-  }
-
-  if(selTnMons.length===0){
-    bar.style.display='none';resEl.innerHTML='';return;
-  }
-  bar.style.display='flex';
-  document.getElementById('tn-chosen-display').innerHTML=
-    selTnMons.map(m=>`<span class="tn-chosen-pill">${m.label}</span>`).join('<span class="tn-plus" style="align-self:center">+</span>');
-
-  if(selTnMons.length<2){resEl.innerHTML='';return;}
-
-  const ids=selTnMons.map(m=>m.id).sort().join('-');
-  const ids2=selTnMons.map(m=>m.id).sort((a,b)=>a>b?-1:1).join('-');
-
-  const n=NGANH.find(x=>x.id===selN);
-  // targetTH: tìm tổ hợp trong dh array của ngành khớp với môn HS đã chọn thi TN
-  const TH_MON_MAP2={
-    'A00':['ly','hoa'],'A01':['ly'],'B00':['hoa','sinh'],
-    'D07':['hoa'],'C00':['dia','su'],'D01':[],'X06':['ly','tin'],
-    'B03':['sinh'],'C04':['dia'],'D14':['su'],'D15':['dia'],'C03':['su'],
-    'X70':['su','gdktpl'],'X35':['su','gdktpl'],'X01':['gdktpl'],
-  };
-  const tnIds=selTnMons.map(m=>m.id);
-  let targetTH='';
-  if(n){
-    let bestCode='', bestScore=-1;
-    n.dh.forEach(d=>{
-      const code=d.split(':')[0].trim();
-      const needed=TH_MON_MAP2[code]||[];
-      // score = số môn khớp - số môn thiếu (ưu tiên khớp nhiều, thiếu ít)
-      const matched=needed.filter(m=>tnIds.includes(m)).length;
-      const missing=needed.filter(m=>!tnIds.includes(m)).length;
-      const score=matched*2-missing;
-      if(score>bestScore){bestScore=score;bestCode=code;}
-    });
-    targetTH=bestCode||n.dh[0].split(':')[0].trim();
-  }
-
-  const getMonName=id=>ALL_MONS.find(m=>m.id===id)?.label||id;
-
-  const possibleTH=[ids,ids2].map(k=>TO_HOP_MAP[k]).filter(Boolean);
-  const A01_open=selTnMons.some(m=>m.id==='ly');
-
-  const allTH=[...new Set([...possibleTH,...(A01_open?['A01']:[])])];
-
-  const D01_always=true;
-  const allCards=[
-    {code:'Toán+Văn+'+selTnMons[0].label, realCode: possibleTH[0]||'—', mons:`Toán, Ngữ văn, ${selTnMons[0].label}`},
-    {code:'Toán+Văn+'+selTnMons[1].label, realCode: possibleTH[1]||possibleTH[0]||'—', mons:`Toán, Ngữ văn, ${selTnMons[1].label}`},
-    {code:'Toán+'+selTnMons[0].label+'+'+selTnMons[1].label, realCode: TO_HOP_MAP[ids]||TO_HOP_MAP[ids2]||'—', mons:`Toán, ${selTnMons[0].label}, ${selTnMons[1].label}`},
-    {code:'D01', realCode:'D01', mons:'Toán, Ngữ văn, Tiếng Anh (nếu học Anh văn tốt)'},
-  ];
-
-  const cards=CHUNG_TABLE.map(r=>{
-    const mon3lower=r.mon3.toLowerCase();
-    const tnIds=selTnMons.map(m=>m.id);
-    const mons_map={ly:'vật lý',hoa:'hóa học',sinh:'sinh học',tin:'tin học',dia:'địa lý',su:'lịch sử',gdktpl:'gdktpl'};
-    const hasMatch=tnIds.some(id=>mons_map[id]&&mon3lower.includes(mons_map[id]));
-    const isTarget=r.dh===targetTH;
-    if(!hasMatch&&!isTarget) return null;
-    return{...r,isTarget,hasMatch};
-  }).filter(Boolean);
-
-  if(cards.length===0){
-    resEl.innerHTML=`<div class="warn-box" style="margin-top:.75rem">Với 2 môn bạn chọn thi tốt nghiệp, chưa tạo được tổ hợp xét tuyển phổ biến nào. Hãy cân nhắc chọn lại hoặc liên hệ HNA để tư vấn.</div>`;
-    return;
-  }
-
-  const sorted=cards.sort((a,b)=>b.isTarget-a.isTarget||b.hasMatch-a.hasMatch);
-
-  resEl.innerHTML=`
-    <p style="font-size:12px;color:var(--text3);margin-bottom:6px">
-      4 môn thi TN của bạn: <strong>Toán, Ngữ văn, ${selTnMons.map(m=>m.label).join(', ')}</strong> → có thể đăng ký các tổ hợp xét tuyển ĐH sau:
-    </p>
-    <div class="tohop-result-grid">
-      ${sorted.map(r=>`
-        <div class="tohop-result-card ${r.isTarget?'match-card':''}">
-          <span class="trc-badge ${r.isTarget?'badge-target':r.hasMatch?'badge-open':'badge-partial'}">
-            ${r.isTarget?'★ Ngành bạn chọn':r.hasMatch?'Mở được':'Tham khảo'}
-          </span>
-          <div class="trc-code">${r.dh}</div>
-          <div class="trc-mons">${r.mon3}</div>
-          <div class="trc-nganh">${r.nganh}</div>
-        </div>`).join('')}
-    </div>
-    <p style="font-size:11px;color:var(--text3);margin-top:8px">★ = tổ hợp phù hợp nhất với ngành <strong>${n?.ten||''}</strong> bạn đã chọn</p>`;
-
-  buildFlowSVG();
-}
-
-function buildFlowSVG(){
-  const wrap=document.getElementById('flow-svg-wrap');
-  if(!wrap)return;
-  const n=NGANH.find(x=>x.id===selN);
-  if(!n||selMons.length<2||selTnMons.length<2){wrap.style.display='none';return;}
-
-  // Tính mainTH thông minh dựa trên môn HS thực sự chọn thi TN
-  const tnIds2=selTnMons.map(m=>m.id);
-  const TH_MON_SVG={'A00':['ly','hoa'],'A01':['ly'],'B00':['hoa','sinh'],'D07':['hoa'],'C00':['dia','su'],'D01':[],'X06':['ly','tin'],'B03':['sinh'],'C04':['dia'],'D14':['su'],'D15':['dia'],'C03':['su'],'X70':['su','gdktpl'],'X35':['su','gdktpl'],'X01':['gdktpl']};
-  let mainTH=n.dh[0].split(':')[0].trim();
-  let bestScore2=-99;
-  n.dh.forEach(d=>{
-    const code=d.split(':')[0].trim();
-    const needed=TH_MON_SVG[code]||[];
-    const score=needed.filter(m=>tnIds2.includes(m)).length*2 - needed.filter(m=>!tnIds2.includes(m)).length;
-    if(score>bestScore2){bestScore2=score;mainTH=code;}
-  });
-  const monL10=selMons.map(m=>m.label);
-  const monTN=selTnMons.map(m=>m.label);
-  const monKhong=selMons.filter(m=>!selTnMons.find(t=>t.id===m.id)).map(m=>m.label);
-
-  const NAVY='#142768', AMBER='#FF9900', TEAL='#1D9E75', CORAL='#D85A30', GRAY='#888780';
-  const TEAL_L='#E1F5EE', TEAL_S='#0F6E56';
-  const AMBER_L='#FAEEDA', AMBER_S='#854F0B';
-  const CORAL_L='#FAECE7', CORAL_S='#993C1D';
-  const NAVY_L='#EAF0FB', NAVY_S='#0C447C';
-  const GRAY_L='#F1EFE8', GRAY_S='#5F5E5A';
-
-  const rowH=38, gap=8;
-  const l10H=40+monL10.length*(rowH+gap)+gap;
-  const svgH=Math.max(l10H+40, 460);
-
-  const monColor=(label)=>{
-    const isTN=monTN.includes(label);
-    if(isTN) return {fill:AMBER_L,stroke:AMBER,txt:AMBER_S,bold:true};
-    return {fill:GRAY_L,stroke:GRAY,txt:GRAY_S,bold:false};
-  };
-
-  const C1x=16,C1w=160, C2x=210,C2w=172, C3x=416,C3w=188;
-  const headerH=34, headerY=16;
-  const monStartY=headerY+headerH+gap;
-
-  let l10Rows='', tnRows='', linesSVG='';
-  const monY={};
-
-  monL10.forEach((label,i)=>{
-    const y=monStartY+i*(rowH+gap);
-    monY[label]=y;
-    const c=monColor(label);
-    const fw=c.bold?'500':'400';
-    l10Rows+=`
-      <rect x="${C1x}" y="${y}" width="${C1w}" height="${rowH}" rx="6"
-        fill="${c.fill}" stroke="${c.stroke}" stroke-width="${c.bold?1.5:0.5}" opacity="${c.bold?1:.55}"/>
-      <text x="${C1x+C1w/2}" y="${y+rowH/2}" text-anchor="middle" dominant-baseline="central"
-        font-size="12" font-weight="${fw}" fill="${c.txt}">${label}</text>`;
-  });
-
-  const fixedMons=['Toán','Ngữ văn'];
-  const allTN=[...fixedMons,...monTN];
-  allTN.forEach((label,i)=>{
-    const y=monStartY+i*(rowH+gap);
-    const isFixed=fixedMons.includes(label);
-    const fill=isFixed?NAVY_L:AMBER_L;
-    const stroke=isFixed?NAVY:AMBER;
-    const txt=isFixed?NAVY_S:AMBER_S;
-    const fw='500';
-    tnRows+=`
-      <rect x="${C2x}" y="${y}" width="${C2w}" height="${rowH}" rx="6"
-        fill="${fill}" stroke="${stroke}" stroke-width="${isFixed?0.5:1.5}"/>
-      <text x="${C2x+C2w/2}" y="${y+rowH/2}" text-anchor="middle" dominant-baseline="central"
-        font-size="12" font-weight="${fw}" fill="${txt}">${label}${isFixed?' (bắt buộc)':''}</text>`;
-  });
-
-  if(monKhong.length>0){
-    const y=monStartY+allTN.length*(rowH+gap)+4;
-    monKhong.forEach((label,i)=>{
-      const ky=y+i*(rowH+gap);
-      tnRows+=`
-        <rect x="${C2x}" y="${ky}" width="${C2w}" height="${rowH}" rx="6"
-          fill="${GRAY_L}" stroke="${GRAY}" stroke-width="0.5" opacity=".4"/>
-        <text x="${C2x+C2w/2}" y="${ky+rowH/2}" text-anchor="middle" dominant-baseline="central"
-          font-size="11" fill="${GRAY_S}" opacity=".5">${label} — không thi</text>`;
-    });
-  }
-
-  monTN.forEach(label=>{
-    const srcY=monY[label];
-    if(srcY===undefined)return;
-    const srcMid=srcY+rowH/2;
-    const dstIdx=fixedMons.length+monTN.indexOf(label);
-    const dstMid=monStartY+dstIdx*(rowH+gap)+rowH/2;
-    linesSVG+=`<path d="M${C1x+C1w} ${srcMid} C${C2x-30} ${srcMid} ${C2x-30} ${dstMid} ${C2x} ${dstMid}"
-      fill="none" stroke="${AMBER}" stroke-width="1.5" stroke-dasharray="5 3" opacity=".7" marker-end="url(#arr)"/>`;
-  });
-
-  const thY=monStartY+2*(rowH+gap);
-  const thCode=mainTH;
-  const thEntry=n.dh.find(d=>d.split(':')[0].trim()===thCode)||n.dh[0];
-  const thMons=thEntry.split(':')[1]?.trim().split('(')[0].trim()||'';
-  const nganh=n.ten;
-
-  linesSVG+=`<line x1="${C2x+C2w}" y1="${monStartY+(allTN.length/2)*(rowH+gap)}"
-    x2="${C3x}" y2="${thY+40}"
-    stroke="${TEAL}" stroke-width="1.5" marker-end="url(#arr)" fill="none"/>`;
-
-  const svgContent=`
-<svg width="100%" viewBox="0 0 620 ${svgH}" role="img">
-  <title>Luồng tổ hợp môn</title>
-  <defs>
-    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </marker>
-  </defs>
-
-  <!-- COL 1 HEADER -->
-  <rect x="${C1x}" y="${headerY}" width="${C1w}" height="${headerH}" rx="7"
-    fill="${NAVY}" stroke="none"/>
-  <text x="${C1x+C1w/2}" y="${headerY+headerH/2}" text-anchor="middle" dominant-baseline="central"
-    font-size="12" font-weight="600" fill="white">Lớp 10 (4 môn chọn)</text>
-
-  <!-- COL 2 HEADER -->
-  <rect x="${C2x}" y="${headerY}" width="${C2w}" height="${headerH}" rx="7"
-    fill="${NAVY}" stroke="none"/>
-  <text x="${C2x+C2w/2}" y="${headerY+headerH/2}" text-anchor="middle" dominant-baseline="central"
-    font-size="12" font-weight="600" fill="white">4 môn thi tốt nghiệp</text>
-
-  <!-- COL 3 HEADER -->
-  <rect x="${C3x}" y="${headerY}" width="${C3w}" height="${headerH}" rx="7"
-    fill="${NAVY}" stroke="none"/>
-  <text x="${C3x+C3w/2}" y="${headerY+headerH/2}" text-anchor="middle" dominant-baseline="central"
-    font-size="12" font-weight="600" fill="white">Tổ hợp → Ngành</text>
-
-  <!-- LINES -->
-  ${linesSVG}
-
-  <!-- L10 ROWS -->
-  ${l10Rows}
-
-  <!-- TN ROWS -->
-  ${tnRows}
-
-  <!-- TH BOX -->
-  <rect x="${C3x}" y="${thY}" width="${C3w}" height="60" rx="10"
-    fill="${TEAL_L}" stroke="${TEAL}" stroke-width="2"/>
-  <text x="${C3x+C3w/2}" y="${thY+20}" text-anchor="middle" dominant-baseline="central"
-    font-size="22" font-weight="700" fill="${TEAL_S}">${thCode}</text>
-  <text x="${C3x+C3w/2}" y="${thY+44}" text-anchor="middle" dominant-baseline="central"
-    font-size="11" fill="${TEAL_S}">${thMons}</text>
-
-  <!-- NGANH BOX -->
-  <rect x="${C3x}" y="${thY+76}" width="${C3w}" height="50" rx="8"
-    fill="${CORAL_L}" stroke="${CORAL}" stroke-width="1.5"/>
-  <line x1="${C3x+C3w/2}" y1="${thY+62}" x2="${C3x+C3w/2}" y2="${thY+74}"
-    stroke="${TEAL}" stroke-width="1.5" marker-end="url(#arr)" fill="none"/>
-  <text x="${C3x+C3w/2}" y="${thY+96}" text-anchor="middle" dominant-baseline="central"
-    font-size="13" font-weight="600" fill="${CORAL_S}">${nganh.length>20?nganh.slice(0,20)+'…':nganh}</text>
-  <text x="${C3x+C3w/2}" y="${thY+114}" text-anchor="middle" dominant-baseline="central"
-    font-size="10" fill="${CORAL_S}" opacity=".8">${n&&n.truong?n.truong.split(',').slice(0,2).join(',')+('…'):'Liên hệ HNA: 096 937 4411'}</text>
-
-  <!-- NOTE -->
-  <rect x="${C1x}" y="${svgH-48}" width="${C3x+C3w-C1x}" height="36" rx="7"
-    fill="#FFF4D8" stroke="${AMBER}" stroke-width="0.5"/>
-  <text x="${(C1x+C3x+C3w)/2}" y="${svgH-36}" text-anchor="middle" dominant-baseline="central"
-    font-size="11" fill="${AMBER_S}">Chọn sai môn lớp 10 → mất tổ hợp ${thCode} → không vào được ${nganh.length>18?nganh.slice(0,18)+'…':nganh}</text>
-  <text x="${(C1x+C3x+C3w)/2}" y="${svgH-20}" text-anchor="middle" dominant-baseline="central"
-    font-size="10" fill="${AMBER_S}" opacity=".7">Hướng Nghiệp Alpha — 096 937 4411</text>
-</svg>`;
-
-  wrap.style.display='block';
-  wrap.innerHTML=`<div style="background:var(--bg);border:0.5px solid var(--border);border-radius:var(--r);padding:.75rem;margin-top:.75rem">
-    <p style="font-size:12px;color:var(--text2);margin-bottom:.5rem;font-weight:500">Sơ đồ luồng chọn môn của bạn</p>
-    ${svgContent}
-  </div>`;
-}
-
-function checkMatch(){
-  const n=NGANH.find(x=>x.id===selN);
-  if(!n||selMons.length<2)return;
-
-  const monIds=selMons.map(m=>m.id);
-  const monNames=selMons.map(m=>m.label).join(', ');
-
-  const NEED_MAP={
-    'B00':['hoa','sinh'],'A00':['ly','hoa'],'A01':['ly'],
-    'D07':['hoa'],'C00':['dia','su'],'D01':[],'X06':['ly','tin'],
-    'D14':['su'],'D15':['dia'],'C04':['dia'],'B03':['sinh'],
-    'V00':['ly'],'H00':['mt'],'C03':['su'],
-  };
-
-  const mainTH=n.dh[0].split(':')[0].trim();
-  const needed=NEED_MAP[mainTH]||[];
-  const matched=needed.filter(m=>monIds.includes(m));
-  const missing=needed.filter(m=>!monIds.includes(m));
-
-  let type,icon,title,detail;
-
-  if(needed.length===0){
-    type='match-yes';icon='✅';title='Tổ hợp của bạn phù hợp!';
-    detail=`Tổ hợp <strong>${monNames}</strong> mở được tổ hợp xét tuyển <strong>${mainTH}</strong> vào ngành <strong>${n.ten}</strong>.<br>Bạn đang đi đúng hướng — tiếp tục học tốt các môn này nhé!`;
-  } else if(missing.length===0){
-    type='match-yes';icon='✅';title='Tổ hợp của bạn hoàn toàn phù hợp!';
-    detail=`Tổ hợp <strong>${monNames}</strong> đã có đủ môn cần thiết cho tổ hợp xét tuyển <strong>${mainTH}</strong>.<br>Ngành <strong>${n.ten}</strong> — bạn đang trên đúng con đường!`;
-  } else if(matched.length>0){
-    type='match-partial';icon='⚠️';title='Tổ hợp phù hợp một phần';
-    detail=`Bạn đã có: <strong>${matched.map(id=>ALL_MONS.find(m=>m.id===id)?.label||id).join(', ')}</strong>.<br>
-    Còn thiếu: <strong style="color:#a32d2d">${missing.map(id=>ALL_MONS.find(m=>m.id===id)?.label||id).join(', ')}</strong> để xét tuyển tổ hợp <strong>${mainTH}</strong> vào ngành <strong>${n.ten}</strong>.<br>
-    Nếu trường chưa có tổ hợp này, hãy liên hệ HNA để được tư vấn phương án thay thế.`;
-  } else {
-    type='match-no';icon='❌';title='Tổ hợp chưa phù hợp với ngành bạn chọn';
-    detail=`Tổ hợp <strong>${monNames}</strong> chưa đáp ứng yêu cầu xét tuyển vào <strong>${n.ten}</strong> (cần tổ hợp ${mainTH}: ${n.dh[0].split(':')[1]?.trim()}).<br>
-    Đừng lo — vẫn còn nhiều phương án. Hãy để HNA tư vấn cụ thể cho bạn!`;
-  }
-
-  document.getElementById('match-result').innerHTML=`
-    <div class="match-result ${type}">
-      <div class="match-icon">${icon}</div>
-      <div class="match-title">${title}</div>
-      <div class="match-detail">${detail}</div>
-    </div>`;
-
-  const sf=document.getElementById('send-form');
-  sf.style.display='block';
-  const schoolInput=document.getElementById('school-input').value.trim();
-  if(schoolInput) document.getElementById('sf-school').value=schoolInput;
-  document.getElementById('sf-summary').textContent=
-    `Sẽ gửi: Ngành "${n.ten}" | Tổ hợp "${monNames}" | Kết quả: ${title}`;
-  sf.scrollIntoView({behavior:'smooth',block:'nearest'});
-}
-
-function submitForm(){
-  const name=document.getElementById('sf-name').value.trim();
-  const phone=document.getElementById('sf-phone').value.trim();
-  const school=document.getElementById('sf-school').value.trim();
-  const lop=document.getElementById('sf-lop').value;
-  const tinh=document.getElementById('sf-tinh').value;
-  const status=document.getElementById('send-status');
-
-  if(!name||!phone){
-    status.className='send-status send-err';
-    status.style.display='block';
-    status.textContent='Vui lòng nhập họ tên và số điện thoại để HNA liên hệ hỗ trợ.';
-    return;
-  }
-
-  const n=NGANH.find(x=>x.id===selN);
-  const monNames=selMons.map(m=>m.label).join(', ');
-
-  const entry={
-    timestamp:new Date().toLocaleString('vi-VN'),
-    name,phone,school,lop,tinh,
-    nganh:n?.ten||'',
-    tohop_truong:monNames,
-    traits:[...selT].join(', '),
-  };
-
-  console.log('[HNA Data]',JSON.stringify(entry));
-
-  const GOOGLE_FORM_URL='https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/formResponse';
-  status.className='send-status send-ok';
-  status.style.display='block';
-  status.innerHTML=`✅ <strong>Đã ghi nhận thông tin!</strong> HNA sẽ liên hệ <strong>${phone}</strong> trong vòng 24 giờ để tư vấn chi tiết.<br>
-    <span style="font-size:11px;color:var(--text3)">Hoặc gọi ngay: <a href="tel:0969374411" style="color:var(--navy)">096 937 4411</a></span>`;
-  document.querySelector('#send-form .btn-primary').disabled=true;
-  document.querySelector('#send-form .btn-primary').style.opacity='.5';
-}
-
-function toggleCtruc(){
-  const body=document.getElementById('ctruc-body');
-  const btn=document.getElementById('ctruc-toggle-btn');
-  const hidden=body.style.display==='none';
-  body.style.display=hidden?'block':'none';
-  btn.textContent=hidden?'Thu gọn ▲':'Mở rộng ▼';
-}
-
-function startTool(){
-  document.getElementById('ctruc-body').style.display='none';
-  document.getElementById('ctruc-toggle-btn').textContent='Mở rộng ▼';
-  [1,2,3,4].forEach(i=>{
-    const p=document.getElementById('panel'+i);
-    if(p) p.className='panel'+(i===1?' show':'');
-    const f=document.getElementById('fs'+i);
-    if(f) f.className='flow-step'+(i===1?' active':'');
-  });
-  document.getElementById('flow-bar').scrollIntoView({behavior:'smooth',block:'start'});
-}
-
-buildTraits();
-</script>
-</body>
-</html>
+  'thuc-pham':{B:[{t:'Đại Học Bách
