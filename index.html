@@ -3,10 +3,22 @@
 <!--
 =======================================================================
   HƯỚNG NGHIỆP ALPHA — Công cụ tra cứu tổ hợp môn lớp 10
-  Phiên bản: 2.15  |  Ngày: 2026-06-26
+  Phiên bản: 2.16  |  Ngày: 2026-06-26
   Tác giả: Alpha (Trần Văn Đăng) — 096 937 4411
   Website: www.huongnghiepalpha.vn
 =======================================================================
+
+  CHANGELOG 2.16 (2026-06-26): HỒ SƠ HƯỚNG NGHIỆP CHIẾN LƯỢC (8 phần)
+    Nâng cấp hồ sơ cho HS nhắm trường top, gồm 8 phần:
+    1) Chân dung (mạnh/cải thiện/động lực/phong cách học)
+    2) Lý do chọn ngành (so sánh định lượng với ngành kế tiếp)
+    3) Đánh giá năng lực cạnh tranh (GPA, tiếng Anh, độ hợp ngành vs chuẩn top)
+    4) Xu hướng nghề 5–10 năm (cơ hội/rủi ro/kỹ năng mới — 36 ngành)
+    5) Lộ trình 3 năm có KPI (GPA, IELTS, kỳ thi, dự án)
+    6) Trường Dream–Target–Safety kèm phương thức tuyển sinh
+    7) Kế hoạch portfolio theo ngành (cuộc thi/CC/CLB/dự án/kỹ năng số)
+    8) Mốc kiểm tra mỗi 6 tháng
+    + Thêm input: GPA, tiếng Anh, trường mơ ước, động lực, phong cách học.
 
   CHANGELOG 2.15 (2026-06-26): Tối ưu hồ sơ định hướng
     - Lộ trình hành động theo lớp 10-11-12 (mục 5), tự tô đậm lớp hiện tại,
@@ -659,6 +671,52 @@ a.footer-hl:hover{text-decoration:underline}
 .hs-send-status.err{background:#fff0f0;color:#a32d2d}
 @media(max-width:560px){.pf-road{grid-template-columns:1fr}}
 @media print{.pf-road{grid-template-columns:1fr 1fr 1fr}.pf-road-card.cur{box-shadow:none}}
+
+.hs-adv-title{font-size:12px;font-weight:700;color:var(--navy);margin:6px 0 8px;padding-top:10px;border-top:1px dashed var(--border-strong)}
+select.hs-input{appearance:auto;background:#fff}
+/* Lý do chọn ngành */
+.pf-why{font-size:12.5px;color:var(--text);line-height:1.6;background:#f7f8fc;border-left:3px solid var(--navy);border-radius:0 8px 8px 0;padding:11px 13px}
+.pf-why b{color:var(--navy)}
+/* Năng lực cạnh tranh */
+.pf-cap{display:flex;flex-direction:column;gap:7px}
+.pf-cap-row{display:grid;grid-template-columns:130px 1fr;gap:6px 10px;align-items:center;background:#f7f8fc;border:1px solid var(--border);border-radius:8px;padding:8px 11px}
+.pf-cap-lbl{font-size:11.5px;font-weight:700;color:var(--text2)}
+.pf-cap-val{font-size:12px;font-weight:700}
+.pf-cap-d{grid-column:1/-1;font-size:11px;color:var(--text3);line-height:1.4}
+.pf-cap-ok{color:#1a7a1a}.pf-cap-mid{color:#b07d00}.pf-cap-low{color:#a32d2d}.pf-cap-na{color:var(--text3)}
+.pf-bench{margin-top:9px;font-size:11.5px;color:#7a4f00;background:var(--amber-light);border-radius:8px;padding:9px 12px;line-height:1.55}
+/* Xu hướng */
+.pf-trend{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+.pf-tr{border-radius:9px;padding:11px;border:1px solid var(--border)}
+.pf-tr-co{background:#f1f9f1;border-color:#bfe3bf}.pf-tr-ru{background:#fff6ef;border-color:#f3d4b8}.pf-tr-ky{background:#f0f6ff;border-color:#c6dafc}
+.pf-tr-h{font-size:11.5px;font-weight:700;margin-bottom:5px}
+.pf-tr-co .pf-tr-h{color:#1a7a1a}.pf-tr-ru .pf-tr-h{color:#b85c00}.pf-tr-ky .pf-tr-h{color:#1565C0}
+.pf-tr-b{font-size:11.5px;color:var(--text2);line-height:1.5}
+/* KPI */
+.pf-kpi-li{font-size:11px;color:var(--text2);line-height:1.45;margin-bottom:6px;padding-left:15px;position:relative}
+.pf-kpi-li::before{content:'▸';position:absolute;left:2px;color:var(--navy)}
+/* Tier trường */
+.pf-tier-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+.pf-tier{border:1.5px solid var(--border);border-radius:9px;padding:10px;background:#fff}
+.pf-tier-dream{border-color:#e0a500;background:#fffbf0}.pf-tier-target{border-color:#1a7a1a;background:#f1f9f1}.pf-tier-safe{border-color:#1565C0;background:#f0f6ff}
+.pf-tier-h{font-size:11.5px;font-weight:700;margin-bottom:7px}
+.pf-tier-dream .pf-tier-h{color:#b07d00}.pf-tier-target .pf-tier-h{color:#1a7a1a}.pf-tier-safe .pf-tier-h{color:#1565C0}
+.pf-tier-sch{padding:6px 0;border-top:1px dashed var(--border)}
+.pf-tier-sch:first-of-type{border-top:none}
+.pf-tier-name{font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.3}
+.pf-tier-reg{font-weight:400;color:var(--text3);font-size:10px}
+.pf-tier-meta{font-size:10.5px;color:var(--text2);line-height:1.5;margin-top:2px}
+.pf-tier-pt{font-size:10px;color:var(--text3);line-height:1.4;margin-top:2px}
+.pf-tier-note{font-size:10px;color:var(--text3);font-style:italic;margin-top:6px;padding-top:5px;border-top:1px dashed var(--border)}
+.pf-tier-empty{font-size:11px;color:var(--text3)}
+/* Mốc kiểm tra */
+.pf-chk{display:flex;flex-direction:column;gap:6px}
+.pf-chk-row{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:start;background:#f7f8fc;border:1px solid var(--border);border-radius:8px;padding:8px 11px}
+.pf-chk-row.cur{background:var(--amber-light);border-color:var(--amber)}
+.pf-chk-when{font-size:11px;font-weight:700;color:var(--navy)}
+.pf-chk-do{font-size:11px;color:var(--text2);line-height:1.45}
+@media(max-width:560px){.pf-trend,.pf-tier-grid{grid-template-columns:1fr}.pf-cap-row{grid-template-columns:1fr}.pf-chk-row{grid-template-columns:1fr}}
+@media print{.pf-trend,.pf-tier-grid{grid-template-columns:1fr 1fr 1fr}.pf-cap-row{grid-template-columns:130px 1fr}.pf-sec{break-inside:avoid}}
 </style>
 </head>
 <body>
@@ -970,7 +1028,27 @@ a.footer-hl:hover{text-decoration:underline}
         <button class="hs-grade" onclick="setGrade(11,this)">Lớp 11</button>
         <button class="hs-grade" onclick="setGrade(12,this)">Lớp 12</button>
       </div>
-      <div class="hs-hint">💡 Hồ sơ tự tổng hợp từ lựa chọn của bạn ở Bước 1–4. Hãy hoàn thành Bước 1 (chọn đặc điểm) và chọn 1 ngành ở Bước 2 để có đề xuất chính xác nhất.</div>
+      <div class="hs-adv-title">Thông tin năng lực (giúp hồ sơ chiến lược chính xác hơn)</div>
+      <div class="hs-grid2">
+        <div><label class="hs-lbl">Học lực hiện tại (GPA, thang 10)</label><input type="text" id="hs-gpa" class="hs-input" placeholder="VD: 8.7" oninput="genProfile()"></div>
+        <div><label class="hs-lbl">Trình độ tiếng Anh</label><select id="hs-eng" class="hs-input" onchange="genProfile()">
+          <option value="">Chưa thi / chưa rõ</option>
+          <option value="lt55">IELTS &lt; 5.5 (hoặc Anh khá)</option>
+          <option value="55">IELTS 5.5 – 6.0</option>
+          <option value="65">IELTS 6.5 – 7.0</option>
+          <option value="70">IELTS ≥ 7.0</option>
+        </select></div>
+      </div>
+      <div><label class="hs-lbl">Trường đại học mơ ước</label><input type="text" id="hs-dream" class="hs-input" placeholder="VD: ĐH Bách Khoa Hà Nội" oninput="genProfile()"></div>
+      <div><label class="hs-lbl">Động lực / lý do theo đuổi ngành</label><input type="text" id="hs-motiv" class="hs-input" placeholder="VD: Muốn xây dựng sản phẩm công nghệ giúp ích cho cộng đồng" oninput="genProfile()"></div>
+      <div><label class="hs-lbl">Phong cách học</label><select id="hs-style" class="hs-input" onchange="genProfile()">
+        <option value="">(Chọn)</option>
+        <option value="Tự học, kỷ luật cao">Tự học, kỷ luật cao</option>
+        <option value="Học nhóm, trao đổi">Học nhóm, trao đổi</option>
+        <option value="Học qua thực hành, dự án">Học qua thực hành, dự án</option>
+        <option value="Học qua hình ảnh, sơ đồ">Học qua hình ảnh, sơ đồ</option>
+      </select></div>
+      <div class="hs-hint">💡 Hồ sơ tự tổng hợp từ Bước 1–4 + thông tin trên. Hãy hoàn thành Bước 1 (chọn đặc điểm) và chọn 1 ngành ở Bước 2 để phân tích chính xác nhất.</div>
       <button class="btn btn-primary" style="width:100%;margin-top:4px" onclick="printProfile()">🖨️ In / Lưu PDF hồ sơ</button>
     </div>
 
@@ -2289,7 +2367,7 @@ function goStep(s){
 function resetAll(){
   selT.clear();selN=null;selMons=[];saOpenId=null;
   profileTargetId=null;try{localStorage.removeItem('alpha_hoso')}catch(e){}
-  ['hs-name','hs-dob','hs-school','hs-phone'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  ['hs-name','hs-dob','hs-school','hs-phone','hs-gpa','hs-dream','hs-motiv'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
   document.querySelectorAll('.tbtn').forEach(b=>b.classList.remove('sel'));
   document.getElementById('sbar-txt').textContent='Chưa chọn gì — hãy chọn ít nhất 2 mô tả bản thân';
   document.getElementById('sbar-cnt').textContent='0';
@@ -2840,11 +2918,15 @@ function setGrade(g,el){profileGrade=g;document.querySelectorAll('.hs-grade').fo
 
 function fmtDob(v){if(!v)return'…………………';const p=v.split('-');return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:v;}
 
+const XU_HUONG={"yd":{"co":"Dân số già hóa + nhu cầu chăm sóc sức khỏe tăng mạnh; thiếu bác sĩ ở tuyến tỉnh.","ru":"Đào tạo dài (6 năm + nội trú), áp lực cao, cạnh tranh điểm chuẩn rất gắt.","ky":"Y học chính xác, telemedicine, đọc dữ liệu xét nghiệm bằng AI."},"cntt":{"co":"Nhu cầu nhân lực CNTT/AI luôn dẫn đầu; lương khởi điểm cao, làm việc toàn cầu.","ru":"AI thay thế lập trình viên cơ bản; phải học liên tục, dễ lỗi thời.","ky":"AI/Machine Learning, prompt engineering, cloud, an ninh mạng, MLOps."},"kt-tc":{"co":"Số hóa ngân hàng, fintech, đầu tư cá nhân bùng nổ; nhiều vị trí phân tích.","ru":"Công việc giao dịch lặp lại dễ bị tự động hóa; cạnh tranh chứng chỉ quốc tế.","ky":"Phân tích dữ liệu tài chính, fintech, blockchain, CFA/ACCA."},"kt-qtkd":{"co":"Kinh tế số, thương mại điện tử, khởi nghiệp mở nhiều hướng quản trị.","ru":"Ngành phổ biến → \"thừa thầy thiếu thợ\" nếu không có chuyên môn sâu.","ky":"Phân tích kinh doanh (BA), digital marketing, quản trị dữ liệu, AI ứng dụng."},"spg":{"co":"Chính sách miễn học phí + sinh hoạt phí; nhu cầu giáo viên giỏi, EdTech tăng.","ru":"Thu nhập khởi điểm khiêm tốn; áp lực đổi mới chương trình 2018.","ky":"Công nghệ giáo dục, dạy học cá nhân hóa, thiết kế bài giảng số."},"bao-chi":{"co":"Truyền thông số, content, thương hiệu cá nhân, marketing bùng nổ.","ru":"AI tạo nội dung cạnh tranh; báo in thu hẹp, cần đa năng.","ky":"Sản xuất nội dung đa nền tảng, SEO, dữ liệu khán giả, AI sáng tạo."},"luat":{"co":"Hội nhập + doanh nghiệp cần tư vấn pháp lý, sở hữu trí tuệ, M&A.","ru":"Cạnh tranh cao, cần chứng chỉ hành nghề; AI hỗ trợ tra cứu luật.","ky":"Pháp lý công nghệ, legaltech, tiếng Anh pháp lý, hợp đồng quốc tế."},"cokhi":{"co":"Sản xuất chuyển sang tự động hóa, robot, ô tô điện; FDI lớn cần kỹ sư.","ru":"Công việc vận hành truyền thống giảm; cần nâng cấp lên cơ điện tử.","ky":"Cơ điện tử, robot công nghiệp, mô phỏng CAD/CAE, IoT sản xuất."},"xd":{"co":"Hạ tầng, đô thị thông minh, đường sắt cao tốc đầu tư mạnh.","ru":"Theo chu kỳ bất động sản; công trường vất vả, cạnh tranh nhà thầu.","ky":"BIM, thiết kế bền vững, vật liệu mới, quản lý dự án số."},"tkdh":{"co":"Game, hoạt hình, UX/UI, quảng cáo số cần designer mạnh.","ru":"AI tạo hình ảnh cạnh tranh khâu cơ bản; cần phong cách & tư duy riêng.","ky":"UX/UI, motion, 3D, AI hỗ trợ thiết kế, dựng sản phẩm số."},"du-lich":{"co":"Du lịch phục hồi mạnh, MICE, du lịch cao cấp; cần nhân lực ngoại ngữ.","ru":"Nhạy với khủng hoảng (dịch bệnh, kinh tế); mùa vụ, áp lực dịch vụ.","ky":"Trải nghiệm khách hàng, du lịch số, ngoại ngữ 2, quản trị sự kiện."},"nlts":{"co":"Nông nghiệp công nghệ cao, nông nghiệp sạch, xuất khẩu nông sản tăng.","ru":"Định kiến \"ngành nông\"; phụ thuộc thời tiết, thị trường.","ky":"Nông nghiệp chính xác, công nghệ sinh học, dữ liệu, chuỗi cung ứng."},"tl":{"co":"Sức khỏe tinh thần được quan tâm; tham vấn học đường, doanh nghiệp tăng.","ru":"Nghề mới ở VN, khung pháp lý hành nghề còn đang hoàn thiện.","ky":"Tham vấn dựa bằng chứng, tâm lý số, đánh giá tâm lý, đạo đức nghề."},"ngoai-giao":{"co":"Hội nhập sâu; ngoại ngữ hiếm + quan hệ quốc tế có giá.","ru":"Cạnh tranh cao vào cơ quan nhà nước; cần ngoại ngữ xuất sắc.","ky":"Đa ngoại ngữ, đàm phán, hiểu biết liên văn hóa, truyền thông quốc tế."},"nt":{"co":"Công nghiệp văn hóa, giải trí, nội dung số tạo nhiều sân chơi.","ru":"Thu nhập không ổn định giai đoạn đầu; cần tài năng + kiên trì.","ky":"Nghệ thuật số, sản xuất nội dung, thương hiệu cá nhân, công nghệ biểu diễn."},"khtn":{"co":"Công nghệ sinh học, dược, vật liệu, môi trường cần nhà nghiên cứu.","ru":"Đường nghiên cứu dài, cần học cao học; việc làm tập trung ở viện/doanh nghiệp lớn.","ky":"Phân tích dữ liệu khoa học, công nghệ sinh học, lab tự động, AI trong R&D."},"quan-doi":{"co":"Việc làm ổn định, được bao cấp đào tạo, vị thế xã hội.","ru":"Sơ tuyển sức khỏe/lý lịch nghiêm ngặt; kỷ luật cao, điều động.","ky":"Tác chiến công nghệ cao, an ninh mạng, chỉ huy, ngoại ngữ."},"ke-toan":{"co":"Mọi doanh nghiệp cần; kiểm toán, thuế, tư vấn tài chính ổn định.","ru":"Nghiệp vụ ghi sổ bị phần mềm/AI thay thế; cần lên kiểm toán/phân tích.","ky":"Kiểm toán dữ liệu, ERP, phân tích tài chính, ACCA/CPA."},"ban-dan":{"co":"Việt Nam thành cứ điểm bán dẫn; cực thiếu kỹ sư, lương rất cao.","ru":"Ngành mới, đào tạo khó, cần nền Toán-Lý mạnh và tiếng Anh.","ky":"Thiết kế vi mạch, kiểm thử, vật liệu bán dẫn, EDA tools."},"ngoai-thuong":{"co":"Xuất nhập khẩu, logistics, thương mại quốc tế tăng cùng FTA.","ru":"Biến động chuỗi cung ứng toàn cầu; cạnh tranh ngoại ngữ.","ky":"Logistics số, thương mại điện tử xuyên biên, tiếng Anh + ngoại ngữ 2."},"dien-tu":{"co":"Tự động hóa, năng lượng tái tạo, xe điện, IoT cần kỹ sư điện-điện tử.","ru":"Cần cập nhật công nghệ liên tục; cạnh tranh với bán dẫn.","ky":"Hệ thống nhúng, IoT, điều khiển tự động, năng lượng thông minh."},"hang-khong":{"co":"Hàng không phục hồi, vũ trụ và UAV mới nổi; ít trường đào tạo → hiếm.","ru":"Đầu vào khắt khe (sức khỏe phi công); ngành hẹp, đầu tư lớn.","ky":"Hệ thống điều khiển bay, vật liệu hàng không, dữ liệu không gian."},"vat-lieu":{"co":"Vật liệu mới, nano, pin, bán dẫn là nền cho công nghệ tương lai.","ru":"Phần lớn là nghiên cứu; việc làm tập trung ở doanh nghiệp công nghệ cao.","ky":"Vật liệu nano, mô phỏng vật liệu, pin/năng lượng, AI trong vật liệu."},"thuc-pham":{"co":"An toàn thực phẩm, dinh dưỡng, xuất khẩu thực phẩm chế biến tăng.","ru":"Cạnh tranh với ngành sinh-hóa; cần chuẩn quốc tế.","ky":"Công nghệ chế biến, kiểm soát chất lượng, dinh dưỡng, truy xuất nguồn gốc."},"hang-hai":{"co":"Kinh tế biển, logistics cảng biển, năng lượng ngoài khơi phát triển.","ru":"Đi biển xa nhà, môi trường khắc nghiệt; ngành hẹp.","ky":"Tự động hóa tàu, logistics cảng số, kỹ thuật biển, an toàn hàng hải."},"mo-dia":{"co":"Khoáng sản, dầu khí, địa kỹ thuật cho hạ tầng vẫn cần kỹ sư.","ru":"Việc làm vùng sâu, theo chu kỳ tài nguyên; ngành kén.","ky":"Khảo sát địa vật lý số, GIS, mô hình hóa địa chất, an toàn mỏ."},"toan-tk":{"co":"Khoa học dữ liệu, AI, định phí bảo hiểm, tài chính định lượng \"khát\" nhân lực.","ru":"Cần nền Toán rất mạnh + lập trình; trừu tượng, kén người.","ky":"Khoa học dữ liệu, machine learning, thống kê ứng dụng, lập trình."},"nhan-su":{"co":"Doanh nghiệp coi trọng quản trị nhân tài, văn hóa, trải nghiệm nhân viên.","ru":"Một số nghiệp vụ hành chính bị tự động hóa; cần chiến lược hơn.","ky":"Phân tích dữ liệu nhân sự (People Analytics), HR tech, tâm lý tổ chức."},"van-hoa":{"co":"Công nghiệp văn hóa, di sản, nghiên cứu xã hội, chính sách công.","ru":"Việc làm nhiều ở khu vực công/nghiên cứu; thu nhập khởi điểm vừa phải.","ky":"Nghiên cứu dữ liệu xã hội, số hóa di sản, phân tích chính sách."},"the-thao":{"co":"Thể thao học đường, fitness, kinh tế thể thao, dinh dưỡng vận động tăng.","ru":"Sự nghiệp thi đấu ngắn; cần chuyển hướng huấn luyện/quản lý sớm.","ky":"Khoa học thể thao, dữ liệu vận động, dinh dưỡng, quản trị sự kiện thể thao."},"thoi-trang":{"co":"Thời trang bền vững, thương hiệu Việt, thương mại điện tử thời trang lên.","ru":"Cạnh tranh gu thẩm mỹ cao; thị trường biến động nhanh.","ky":"Thiết kế số, thời trang bền vững, thương hiệu, bán hàng đa kênh."},"in-giay":{"co":"Bao bì, in ấn số, vật liệu đóng gói thân thiện môi trường tăng.","ru":"In truyền thống thu hẹp; cần chuyển sang số & bao bì thông minh.","ky":"In số, bao bì bền vững, thiết kế kết cấu, kiểm soát chất lượng."},"tai-nguyen":{"co":"Biến đổi khí hậu, năng lượng xanh, ESG đưa môi trường thành ưu tiên toàn cầu.","ru":"Khung chính sách đang hình thành; việc làm phụ thuộc đầu tư xanh.","ky":"GIS, dữ liệu môi trường, năng lượng tái tạo, kinh tế tuần hoàn."},"cham-soc":{"co":"Ngành làm đẹp, chăm sóc sức khỏe, dịch vụ gia đình tăng trưởng đều.","ru":"Cạnh tranh dịch vụ; cần tay nghề + thương hiệu cá nhân.","ky":"Công nghệ thẩm mỹ, chăm sóc dựa khoa học, thương hiệu, bán hàng số."},"cong-tac-xa-hoi":{"co":"An sinh xã hội, NGO, doanh nghiệp xã hội, CSR ngày càng được đầu tư.","ru":"Thu nhập khu vực công vừa phải; cần đam mê bền bỉ.","ky":"Quản lý dự án xã hội, phân tích dữ liệu cộng đồng, gây quỹ, vận động chính sách."},"bac-si-thu-y":{"co":"Thú cưng bùng nổ + chăn nuôi công nghiệp cần bác sĩ thú y; ít cạnh tranh hơn Y.","ru":"Công việc vất vả, rủi ro bệnh nghề; cơ sở thú y cao cấp tập trung thành phố.","ky":"Chẩn đoán hình ảnh thú y, an toàn sinh học, dịch tễ, quản lý phòng khám."}};
+const PORTFOLIO_NG={"yd":["Olympic Sinh học/Hóa học cấp tỉnh–quốc gia","Tình nguyện y tế cộng đồng, sơ cấp cứu","Chứng chỉ tiếng Anh y khoa (IELTS ≥6.5)","Dự án tìm hiểu một bệnh/chủ đề sức khỏe","Tập đọc bài báo y khoa cơ bản"],"cntt":["Lập trình thi đấu (Olympic Tin, Codeforces)","Hackathon, dự án phần mềm cá nhân trên GitHub","Khóa học AI/ML (Coursera) + chứng chỉ","CLB Tin học / Robotics","Xây 1 sản phẩm số (web/app) tự làm"],"kt-tc":["Cuộc thi phân tích đầu tư / mô phỏng chứng khoán","Chứng chỉ tiếng Anh + nền tảng kế toán/tài chính online","CLB Tài chính – Kinh tế","Dự án phân tích báo cáo tài chính một công ty","Thành thạo Excel nâng cao + Power BI"],"kt-qtkd":["Cuộc thi khởi nghiệp / case competition","Bán hàng/dự án kinh doanh nhỏ thực tế","CLB Khởi nghiệp / Marketing","Chứng chỉ Digital Marketing (Google)","Phân tích dữ liệu kinh doanh bằng Excel/SQL"],"spg":["Trợ giảng, gia sư, dạy kèm tình nguyện","Cuộc thi nghiệp vụ sư phạm / hùng biện","CLB tình nguyện giáo dục vùng khó","Thiết kế 1 bài giảng số (slide/video)","Chứng chỉ tin học + công cụ EdTech (Canva, Quizizz)"],"bao-chi":["Viết bài cho báo/trang trường, blog cá nhân","Quản lý fanpage/kênh nội dung cá nhân","CLB Truyền thông / Báo chí","Cuộc thi viết, làm phim ngắn, podcast","Chứng chỉ tiếng Anh + kỹ năng dựng video/SEO"],"luat":["Cuộc thi tranh biện (debate), phiên tòa giả định","Đọc và tóm tắt vụ án/luật thực tế","CLB Luật / Tranh biện","Chứng chỉ tiếng Anh pháp lý","Viết bài phân tích một vấn đề pháp lý"],"cokhi":["Cuộc thi Robocon / sáng chế kỹ thuật","Dự án chế tạo mô hình cơ khí/robot","CLB Kỹ thuật / STEM","Học CAD (SolidWorks/AutoCAD) + chứng chỉ","Tự làm 1 sản phẩm cơ – điện tử"],"xd":["Cuộc thi thiết kế kiến trúc/mô hình","Vẽ kỹ thuật, dựng mô hình 3D","CLB Kiến trúc / Kỹ thuật","Học AutoCAD/SketchUp/Revit","Dự án thiết kế một công trình nhỏ"],"tkdh":["Xây portfolio thiết kế (Behance/Dribbble)","Cuộc thi thiết kế/đồ họa","Nhận dự án thiết kế nhỏ thực tế","Thành thạo Photoshop/Illustrator/Figma","Làm 1 sản phẩm motion/3D ngắn"],"du-lich":["Hướng dẫn/tổ chức tour, sự kiện nhỏ","Chứng chỉ ngoại ngữ (Anh + 1 ngôn ngữ 2)","CLB Du lịch / Sự kiện","Làm nội dung review du lịch","Kỹ năng tổ chức sự kiện + dịch vụ khách hàng"],"nlts":["Dự án trồng trọt/chăn nuôi/thủy sản nhỏ","Cuộc thi khoa học kỹ thuật về nông nghiệp","CLB Sinh học / Môi trường","Tìm hiểu nông nghiệp công nghệ cao","Kỹ năng phân tích dữ liệu cây trồng/vật nuôi"],"tl":["Tình nguyện hỗ trợ tâm lý học đường","Đọc sách tâm lý + viết bài phản ánh","CLB Kỹ năng sống / Tâm lý","Khóa học tâm lý online + chứng chỉ","Dự án khảo sát nhỏ về sức khỏe tinh thần"],"ngoai-giao":["Mô phỏng Liên Hợp Quốc (MUN)","Chứng chỉ tiếng Anh cao + ngoại ngữ 2","CLB Đối ngoại / Tranh biện","Viết bài về quan hệ quốc tế","Kỹ năng thuyết trình, đàm phán đa văn hóa"],"nt":["Xây portfolio tác phẩm (tranh/nhạc/biểu diễn)","Tham gia cuộc thi/triển lãm nghệ thuật","CLB Nghệ thuật của trường","Luyện kỹ năng chuyên môn đều đặn","Làm nội dung nghệ thuật số (digital art/video)"],"khtn":["Nghiên cứu khoa học kỹ thuật (KHKT) cấp tỉnh","Olympic Hóa/Sinh/Lý","CLB Nghiên cứu khoa học","Học phân tích dữ liệu (Python cơ bản)","Viết báo cáo nghiên cứu nhỏ"],"quan-doi":["Rèn thể lực đạt chuẩn sơ tuyển","Hoạt động Đoàn, dân quân, kỷ luật tốt","Giữ học bạ & hạnh kiểm xuất sắc","Chứng chỉ tin học + tiếng Anh","Tìm hiểu kỹ tiêu chuẩn sơ tuyển sức khỏe/lý lịch"],"ke-toan":["Cuộc thi kế toán/kiểm toán mô phỏng","Nền tảng kế toán online + chứng chỉ tiếng Anh","CLB Kế toán – Kiểm toán","Thành thạo Excel + phần mềm kế toán","Dự án lập sổ sách cho 1 hoạt động nhỏ"],"ban-dan":["Olympic Toán/Lý/Tin","Dự án mạch điện tử/lập trình vi điều khiển","CLB Điện tử / STEM","Chứng chỉ tiếng Anh ≥6.5 (ngành quốc tế hóa)","Học nền tảng thiết kế vi mạch"],"ngoai-thuong":["Cuộc thi thương mại/khởi nghiệp quốc tế","Chứng chỉ tiếng Anh cao + ngoại ngữ 2","CLB Kinh tế đối ngoại / Logistics","Tìm hiểu quy trình xuất nhập khẩu thực tế","Kỹ năng phân tích dữ liệu + thương mại điện tử"],"dien-tu":["Cuộc thi robot/điện tử/IoT","Dự án mạch/hệ thống nhúng (Arduino)","CLB Điện – Điện tử / STEM","Học lập trình nhúng + chứng chỉ","Tự làm 1 thiết bị IoT nhỏ"],"hang-khong":["Olympic Toán/Lý","Mô hình máy bay/UAV, CLB kỹ thuật","Rèn sức khỏe (nếu hướng phi công)","Chứng chỉ tiếng Anh cao","Tìm hiểu hệ thống điều khiển bay"],"vat-lieu":["Nghiên cứu KHKT về vật liệu","Olympic Hóa/Lý","CLB Nghiên cứu khoa học","Học mô phỏng vật liệu cơ bản","Viết báo cáo thí nghiệm nhỏ"],"thuc-pham":["Dự án chế biến/kiểm nghiệm thực phẩm","Cuộc thi KHKT về thực phẩm/dinh dưỡng","CLB Hóa – Sinh","Tìm hiểu an toàn thực phẩm + HACCP","Kỹ năng phân tích chất lượng"],"hang-hai":["Rèn thể lực, kỷ luật","CLB kỹ thuật / hàng hải","Olympic Toán/Lý","Chứng chỉ tiếng Anh","Tìm hiểu logistics cảng biển"],"mo-dia":["Nghiên cứu KHKT về địa chất/môi trường","CLB Địa lý / Khoa học Trái Đất","Học GIS cơ bản","Khảo sát thực địa nhỏ","Kỹ năng phân tích dữ liệu địa chất"],"toan-tk":["Olympic Toán, cuộc thi giải toán/khoa học dữ liệu","Dự án phân tích dữ liệu (Python)","CLB Toán / Tin","Khóa học data science + chứng chỉ","Thi đấu Kaggle cơ bản"],"nhan-su":["Tổ chức sự kiện, làm trưởng nhóm/CLB","Khóa học quản trị nhân sự online","CLB Kỹ năng / Lãnh đạo","Phân tích dữ liệu nhân sự (Excel)","Chứng chỉ tiếng Anh + kỹ năng giao tiếp"],"van-hoa":["Nghiên cứu xã hội/khảo sát cộng đồng","Cuộc thi viết, hùng biện về văn hóa-xã hội","CLB Khoa học xã hội / Truyền thông","Số hóa tư liệu/di sản nhỏ","Kỹ năng phân tích dữ liệu xã hội"],"the-thao":["Đạt thành tích/giải thể thao","Trợ lý huấn luyện, tổ chức giải đấu","CLB thể thao của trường","Tìm hiểu khoa học thể thao + dinh dưỡng","Rèn thể lực đạt chuẩn năng khiếu"],"thoi-trang":["Xây portfolio thiết kế thời trang","Cuộc thi thiết kế/trình diễn","CLB Thời trang / Mỹ thuật","Học thiết kế số (Illustrator, CLO 3D)","Làm 1 bộ sưu tập nhỏ"],"in-giay":["Dự án thiết kế bao bì","CLB Thiết kế / Kỹ thuật","Học thiết kế đồ họa + kết cấu bao bì","Tìm hiểu in số & vật liệu bền vững","Kỹ năng kiểm soát chất lượng"],"tai-nguyen":["Dự án môi trường/tái chế ở trường","Cuộc thi KHKT về môi trường","CLB Môi trường / Khoa học","Học GIS + dữ liệu môi trường","Hoạt động xanh, ESG cộng đồng"],"cham-soc":["Học nghề/khóa chăm sóc sắc đẹp cơ bản","Xây thương hiệu cá nhân trên mạng xã hội","CLB Kỹ năng / Dịch vụ","Chứng chỉ nghề liên quan","Kỹ năng bán hàng & nội dung số"],"cong-tac-xa-hoi":["Tình nguyện cộng đồng, dự án xã hội","Tổ chức chiến dịch gây quỹ nhỏ","CLB Tình nguyện / Xã hội","Khóa học quản lý dự án xã hội","Kỹ năng khảo sát & phân tích cộng đồng"],"bac-si-thu-y":["Tình nguyện ở trại/trạm thú y","Olympic Sinh học","CLB Sinh học / Động vật","Tìm hiểu chăm sóc & dịch tễ vật nuôi","Chứng chỉ tiếng Anh + kỹ năng quan sát"]};
+const MA_P={};try{ALL_207_SCHOOLS.forEach(function(s){if(s.m&&!(s.m in MA_P))MA_P[s.m]=s.p;});}catch(e){}
+
 function genProfile(){
   const out=document.getElementById('profile-output');if(!out)return;
-  const name=(document.getElementById('hs-name').value||'').trim();
-  const dob=document.getElementById('hs-dob').value;
-  const school=(document.getElementById('hs-school').value||'').trim();
+  const gv=id=>((document.getElementById(id)||{}).value||'').trim();
+  const name=gv('hs-name'),dob=document.getElementById('hs-dob')?document.getElementById('hs-dob').value:'',school=gv('hs-school');
+  const gpa=gv('hs-gpa'),eng=gv('hs-eng'),dream=gv('hs-dream'),motiv=gv('hs-motiv'),style=gv('hs-style');
 
   const ranked=scoreNganh();
   const hasTraits=selT.size>=2;
@@ -2853,29 +2935,80 @@ function genProfile(){
   if(!target)target=top5[0];
   const tgtOpts=[target,...top5.filter(n=>n.id!==target.id)].slice(0,6);
 
-  // Tổ hợp thi tốt nghiệp THPT (Toán+Văn bắt buộc + 2 môn tự chọn từ tổ hợp chủ lực)
+  // tổ hợp thi TN
   const chu=target.dh[0];
   const monPart=(chu.split(':')[1]||'').replace(/\(.*?\)/g,'').trim();
   const mons=monPart.split('–').map(x=>x.trim()).filter(Boolean);
   const tuChon=mons.filter(m=>!/^Toán$/i.test(m)&&!/(Ngữ\s*văn|^Văn$)/i.test(m));
   const tnText=tuChon.length?`Toán, Ngữ văn <span class="pf-must">(bắt buộc)</span> + ${tuChon.join(', ')} <span class="pf-pick">(tự chọn)</span>`:`Toán, Ngữ văn + 2 môn theo tổ hợp ngành`;
 
-  // Trường theo 3 miền (bỏ qua miền không có trường cho ngành)
+  // trường: gộp + tag miền, sort theo điểm
   const mien=NGANH_TRUONG_MIEN[target.id];
-  const REGS=[{k:'B',label:'🔵 Miền Bắc',cls:'pf-sch-bac'},{k:'T',label:'🟢 Miền Trung',cls:'pf-sch-trung'},{k:'N',label:'🟠 Miền Nam',cls:'pf-sch-nam'}];
-  const regionCards=REGS.map(rg=>{
-    const list=((mien&&mien[rg.k])?mien[rg.k]:[]).filter(s=>s.diem>0).sort((a,b)=>b.diem-a.diem);
-    if(!list.length)return '';
-    const f=list[0];const d=MA_DEAN[f.m]||MA_DEAN[f.m.replace(/\d+$/,'')]||'';
-    const range=list.length>1?`${list[list.length-1].diem.toFixed(1)}–${f.diem.toFixed(1)}`:f.diem.toFixed(2);
-    return `<div class="pf-sch ${rg.cls}"><div class="pf-sch-label">${rg.label}</div><div class="pf-sch-name">${f.t}</div><div class="pf-sch-meta">Điểm chuẩn 2025: <b>${f.diem.toFixed(2)}</b> · Khối ${f.th}${d?` · <a href="${d}" target="_blank" rel="noopener" class="pf-sch-link">📄 Đề án</a>`:''}</div><div class="pf-sch-note">Trong miền: ${list.length} trường · điểm ${range}</div></div>`;
-  }).filter(Boolean);
+  const regNames={B:'Bắc',T:'Trung',N:'Nam'};
+  let allSch=[];
+  if(mien)['B','T','N'].forEach(k=>(mien[k]||[]).forEach(s=>{if(s.diem>0)allSch.push({...s,reg:regNames[k]});}));
+  allSch.sort((a,b)=>b.diem-a.diem);
+  const deanOf=m=>MA_DEAN[m]||MA_DEAN[m.replace(/\d+$/,'')]||'';
+  const ptOf=m=>MA_P[m]||MA_P[m.replace(/\d+$/,'')]||'';
+  const n=allSch.length, t3=Math.ceil(n/3);
+  const dreamG=allSch.slice(0,Math.min(2,n));
+  const safeG=n>2?allSch.slice(Math.max(0,n-2)):[];
+  const targetG=n>4?allSch.slice(t3,t3+2):(n>2?[allSch[Math.floor(n/2)]]:[]);
+  const schCard=(s)=>`<div class="pf-tier-sch"><div class="pf-tier-name">${s.t} <span class="pf-tier-reg">· ${s.reg}</span></div><div class="pf-tier-meta">ĐC 2025: <b>${s.diem.toFixed(2)}</b> · Khối ${s.th}${deanOf(s.m)?` · <a href="${deanOf(s.m)}" target="_blank" rel="noopener" class="pf-sch-link">📄 Đề án</a>`:''}</div>${ptOf(s.m)?`<div class="pf-tier-pt">Phương thức: ${ptOf(s.m)}</div>`:''}</div>`;
+  const tierBox=(label,cls,arr,note)=>`<div class="pf-tier ${cls}"><div class="pf-tier-h">${label}</div>${arr.length?arr.map(schCard).join(''):'<div class="pf-tier-empty">Đang cập nhật</div>'}<div class="pf-tier-note">${note}</div></div>`;
 
-  // Kỹ năng cần rèn luyện
+  // kỹ năng
   const skills=[...new Set(target.traits.map(t=>TRAIT_SKILL[t]).filter(Boolean))];
   const allSkills=[...skills,...KY_NANG_CHUNG];
 
-  
+  // điểm cần cải thiện = đặc điểm ngành cần nhưng chưa chọn
+  const gaps=target.traits.filter(t=>!selT.has(t)).map(t=>TRAIT_SKILL[t]).filter(Boolean);
+
+  // lý do chọn ngành
+  const matchN=target.traits.filter(t=>selT.has(t)).length, matchTot=target.traits.length;
+  const matchedLabels=target.traits.filter(t=>selT.has(t)).map(t=>(TRAITS.find(x=>x.id===t)||{}).label).filter(Boolean);
+  const runner=top5.find(n2=>n2.id!==target.id);
+  const runnerMatch=runner?runner.traits.filter(t=>selT.has(t)).length:0;
+  let whyHtml;
+  if(hasTraits){
+    whyHtml=`Ngành <b>${target.ten}</b> khớp <b>${matchN}/${matchTot}</b> đặc điểm mạnh em đã chọn${matchedLabels.length?` (${matchedLabels.slice(0,3).join('; ')}${matchedLabels.length>3?'…':''})`:''}. `;
+    if(runner) whyHtml+=`So với <b>${runner.ten}</b> (khớp ${runnerMatch}/${runner.traits.length}), ${target.ten.split('–')[0].trim()} ${matchN>=runnerMatch?'bám sát thiên hướng của em hơn':'cũng là lựa chọn đáng cân nhắc'}. `;
+    whyHtml+=`Bản chất ngành: ${target.tomtat||target.mo||''}`;
+  } else {
+    whyHtml=`Hãy hoàn thành Bước 1 (chọn đặc điểm) để có phân tích vì sao ngành này phù hợp với em. Bản chất ngành: ${target.tomtat||target.mo||''}`;
+  }
+
+  // năng lực cạnh tranh
+  const dhStr=target.dh.join(' ');
+  const needEng=/Tiếng Anh|Ngoại ngữ/.test(dhStr)||['ngoai-giao','ngoai-thuong','du-lich','bao-chi','cntt','ban-dan','kt-tc','kt-qtkd'].includes(target.id);
+  const gpaNum=parseFloat((gpa||'').replace(',','.'))||0;
+  const gpaA=gpaNum>=9?{t:`${gpaNum.toFixed(1)} — Mạnh`,c:'ok',d:'Đủ sức cạnh tranh nhóm trường top.'}:gpaNum>=8?{t:`${gpaNum.toFixed(1)} — Khá`,c:'mid',d:'Cần nâng lên ≥ 9.0 để vào nhóm top.'}:gpaNum>0?{t:`${gpaNum.toFixed(1)} — Cần cải thiện`,c:'low',d:'Tập trung kéo GPA lên ≥ 8.5 sớm.'}:{t:'Chưa nhập',c:'na',d:'Nhập GPA để được đánh giá.'};
+  const engMap={'':{t:'Chưa rõ',c:'na',d:'Hãy thi thử để biết trình độ.'},'lt55':{t:'Đang xây nền',c:'low',d:needEng?'Ngành cần tiếng Anh — ưu tiên nâng sớm.':'Nên có nền tảng vững.'},'55':{t:'IELTS 5.5–6.0 — Khá',c:'mid',d:'Hướng tới 6.5+ để cạnh tranh top.'},'65':{t:'IELTS 6.5–7.0 — Tốt',c:'ok',d:'Lợi thế rõ khi xét tuyển kết hợp.'},'70':{t:'IELTS ≥ 7.0 — Mạnh',c:'ok',d:'Lợi thế lớn ở trường top & quốc tế.'}};
+  const engA=engMap[eng]||engMap[''];
+  const tdA=hasTraits?(matchN>=3?{t:`Khớp ${matchN}/${matchTot} đặc điểm — Mạnh`,c:'ok'}:matchN>=2?{t:`Khớp ${matchN}/${matchTot} — Khá`,c:'mid'}:{t:`Khớp ${matchN}/${matchTot} — Cần xem lại ngành`,c:'low'}):{t:'Chưa đánh giá (làm Bước 1)',c:'na'};
+  const capRow=(lbl,a)=>`<div class="pf-cap-row"><div class="pf-cap-lbl">${lbl}</div><div class="pf-cap-val pf-cap-${a.c}">${a.t}</div><div class="pf-cap-d">${a.d||''}</div></div>`;
+
+  // xu hướng
+  const xh=XU_HUONG[target.id]||{co:'Đang cập nhật.',ru:'Đang cập nhật.',ky:'Đang cập nhật.'};
+  // portfolio
+  const pf=PORTFOLIO_NG[target.id]||['Tham gia CLB liên quan ngành','Một dự án/cuộc thi thực tế','Chứng chỉ tiếng Anh','Kỹ năng số & tin học'];
+
+  // KPI roadmap
+  const engKPI=needEng?['IELTS 5.0–5.5','IELTS 6.0–6.5','IELTS 6.5–7.0']:['Tiếng Anh nền tảng (TB ≥ 8)','Tiếng Anh khá (TB ≥ 8.5)','Tiếng Anh vững để xét kết hợp'];
+  const kpi10=[`GPA ≥ 8.5`,engKPI[0],`Chọn đúng 4 môn tự chọn theo tổ hợp ngành`,`Tham gia 1 CLB liên quan ngành`,`Tìm hiểu sâu & xác nhận ngành mục tiêu`];
+  const kpi11=[`GPA ≥ 9.0`,engKPI[1],`Thi thử ĐGNL/ĐGTD ít nhất 1 lần`,`1 dự án / cuộc thi để vào portfolio`,`Bắt đầu tích lũy chứng chỉ`];
+  const kpi12=[`GPA ≥ 9.0`,engKPI[2],`Thi ĐGNL/ĐGTD chính thức + ôn TN THPT`,`Hoàn thiện portfolio & hồ sơ năng lực`,`Đăng ký nguyện vọng đúng hạn (tháng 7)`];
+  const kpiCard=(lop,items)=>`<div class="pf-road-card${profileGrade==lop?' cur':''}"><div class="pf-road-grade">Lớp ${lop}${profileGrade==lop?' · em đang ở đây':''}</div>${items.map(x=>`<div class="pf-kpi-li">${x}</div>`).join('')}</div>`;
+
+  // mốc kiểm tra 6 tháng
+  const checks=[
+    ['Lớp 10 · HK1',10,'Rà soát GPA HK1; xác nhận đã chọn đúng 4 môn tự chọn.'],
+    ['Lớp 10 · HK2',10,'Đánh giá lại mức độ yêu thích ngành; bắt đầu lộ trình tiếng Anh.'],
+    ['Lớp 11 · HK1',11,'GPA ≥ 9.0; thi thử ĐGNL/ĐGTD lần 1; chọn 1 hoạt động/dự án.'],
+    ['Lớp 11 · HK2',11,'Có kết quả chứng chỉ Anh; hoàn thành 1 dự án cho portfolio.'],
+    ['Lớp 12 · HK1',12,'Chốt danh sách Dream–Target–Safety; thi ĐGNL/ĐGTD chính thức.'],
+    ['Lớp 12 · HK2',12,'Hoàn thiện hồ sơ; đăng ký & rà soát nguyện vọng; ôn thi TN.'],
+  ];
 
   const today=new Date();const td=`${String(today.getDate()).padStart(2,'0')}/${String(today.getMonth()+1).padStart(2,'0')}/${today.getFullYear()}`;
 
@@ -2883,70 +3016,90 @@ function genProfile(){
   <div class="pf-doc">
     <div class="pf-head">
       <div class="pf-brand">HƯỚNG NGHIỆP ALPHA</div>
-      <div class="pf-title">HỒ SƠ ĐỊNH HƯỚNG NGHỀ NGHIỆP</div>
-      <div class="pf-sub">Lập từ lớp 10 · Đồng hành cùng học sinh đến ngày trúng tuyển</div>
+      <div class="pf-title">HỒ SƠ HƯỚNG NGHIỆP CHIẾN LƯỢC</div>
+      <div class="pf-sub">Lập từ lớp 10 · Định hướng vào đại học top đầu Việt Nam</div>
     </div>
-
     <div class="pf-info">
-      <div><span class="pf-k">Họ và tên:</span> <b>${name||'…………………………'}</b></div>
+      <div><span class="pf-k">Họ và tên:</span> <b>${name||'…………………'}</b></div>
       <div><span class="pf-k">Ngày sinh:</span> ${fmtDob(dob)}</div>
-      <div><span class="pf-k">Trường THPT:</span> ${school||'…………………………'}</div>
+      <div><span class="pf-k">Trường THPT:</span> ${school||'…………………'}</div>
       <div><span class="pf-k">Lớp hiện tại:</span> <b>Lớp ${profileGrade}</b></div>
+      <div><span class="pf-k">Trường ĐH mơ ước:</span> ${dream||'…………………'}</div>
+      <div><span class="pf-k">Học lực (GPA):</span> ${gpa||'……'} · <span class="pf-k">Tiếng Anh:</span> ${(engMap[eng]||{}).t||'…'}</div>
     </div>
 
-    <div class="pf-sec">
-      <div class="pf-sec-h">1 · Xu hướng nghề nghiệp đề xuất (5 nhóm ngành phù hợp nhất)</div>
-      ${!hasTraits?`<div class="pf-warn">⚠️ Bạn chưa hoàn thành Bước 1 (chọn đặc điểm bản thân) — danh sách dưới đây chỉ mang tính tham khảo. Hãy quay lại Bước 1 để có đề xuất chính xác.</div>`:`<div class="pf-strengths"><span class="pf-str-h">Điểm mạnh em đã chọn:</span> ${[...selT].map(id=>(TRAITS.find(t=>t.id===id)||{}).label).filter(Boolean).map(l=>`<span class="pf-str-chip">${l}</span>`).join('')}</div>`}
-      <ol class="pf-nganh-list">
-        ${top5.map(n=>`<li><span class="pf-ng-icon">${n.icon}</span><span class="pf-ng-name">${n.ten}</span>${hasTraits&&n.s>0?`<span class="pf-ng-match">${n.s>=3?'Rất phù hợp':n.s>=2?'Phù hợp':'Tham khảo'}</span>`:''}</li>`).join('')}
-      </ol>
-    </div>
+    <div class="pf-target-pick no-print"><span class="pf-tp-label">Đổi ngành mục tiêu:</span> ${tgtOpts.map(nn=>`<button class="pf-tgt-chip${nn.id===target.id?' active':''}" onclick="setProfileTarget('${nn.id}')">${nn.icon} ${nn.ten}</button>`).join('')}</div>
 
     <div class="pf-sec">
-      <div class="pf-sec-h">2 · Ngành mục tiêu: <span class="pf-target">${target.icon} ${target.ten}</span></div>
-      <div class="pf-target-pick no-print"><span class="pf-tp-label">Đổi ngành mục tiêu:</span> ${tgtOpts.map(n=>`<button class="pf-tgt-chip${n.id===target.id?' active':''}" onclick="setProfileTarget('${n.id}')">${n.icon} ${n.ten}</button>`).join('')}</div>
+      <div class="pf-sec-h">1 · Chân dung học sinh</div>
       <div class="pf-2col">
-        <div class="pf-box">
-          <div class="pf-box-h">📘 Tổ hợp môn HỌC ở lớp 10</div>
-          ${target.tohop_l10.map(x=>`<div class="pf-li">${x}</div>`).join('')}
-        </div>
-        <div class="pf-box">
-          <div class="pf-box-h">📝 Tổ hợp thi TỐT NGHIỆP THPT</div>
-          <div class="pf-li">${tnText}</div>
-        </div>
+        <div class="pf-box"><div class="pf-box-h">💪 Điểm mạnh${hasTraits?'':' (chưa làm Bước 1)'}</div>${hasTraits?[...selT].map(id=>(TRAITS.find(t=>t.id===id)||{}).label).filter(Boolean).map(l=>`<div class="pf-li">• ${l}</div>`).join(''):'<div class="pf-li">Hãy hoàn thành Bước 1 để liệt kê điểm mạnh.</div>'}</div>
+        <div class="pf-box"><div class="pf-box-h">🎯 Điểm cần cải thiện</div>${gaps.length?gaps.map(g=>`<div class="pf-li">• ${g}</div>`).join(''):'<div class="pf-li">Em đã hội đủ các đặc điểm cốt lõi của ngành — hãy đào sâu chuyên môn.</div>'}</div>
       </div>
-      <div class="pf-box">
-        <div class="pf-box-h">🎓 Tổ hợp XÉT TUYỂN đại học</div>
-        <div class="pf-pills">${target.dh.map((d,i)=>`<span class="pf-pill${i===0?' star':''}">${d.split(':')[0].trim()}${i===0?' ★':''}<span class="pf-pill-sub">${(d.split(':')[1]||'').replace(/\(.*?\)/g,'').trim()}</span></span>`).join('')}</div>
+      <div class="pf-2col">
+        <div class="pf-box"><div class="pf-box-h">🔥 Động lực</div><div class="pf-li">${motiv||'(Hãy ghi lý do em theo đuổi ngành này — vì sao nó quan trọng với em.)'}</div></div>
+        <div class="pf-box"><div class="pf-box-h">📚 Phong cách học</div><div class="pf-li">${style||'(Chưa chọn)'}</div></div>
       </div>
+    </div>
+
+    <div class="pf-sec">
+      <div class="pf-sec-h">2 · Lý do chọn ngành: <span class="pf-target">${target.icon} ${target.ten}</span></div>
+      <div class="pf-why">${whyHtml}</div>
+      <div class="pf-2col" style="margin-top:10px">
+        <div class="pf-box"><div class="pf-box-h">📘 Tổ hợp HỌC lớp 10</div>${target.tohop_l10.map(x=>`<div class="pf-li">${x}</div>`).join('')}</div>
+        <div class="pf-box"><div class="pf-box-h">📝 Thi TỐT NGHIỆP THPT</div><div class="pf-li">${tnText}</div></div>
+      </div>
+      <div class="pf-box"><div class="pf-box-h">🎓 Tổ hợp XÉT TUYỂN đại học</div><div class="pf-pills">${target.dh.map((d,i)=>`<span class="pf-pill${i===0?' star':''}">${d.split(':')[0].trim()}${i===0?' ★':''}<span class="pf-pill-sub">${(d.split(':')[1]||'').replace(/\(.*?\)/g,'').trim()}</span></span>`).join('')}</div></div>
       ${target.warn?`<div class="pf-warn">⚠️ ${target.warn}</div>`:''}
     </div>
 
     <div class="pf-sec">
-      <div class="pf-sec-h">3 · Trường đào tạo tiêu biểu theo miền</div>
-      ${regionCards.length?`<div class="pf-sch-grid">${regionCards.join('')}</div>
-      <div class="pf-note">Mỗi miền hiển thị trường tiêu biểu (điểm cao nhất) của ngành — bấm "Đề án" để xem đầy đủ. Điểm chuẩn 2025 chỉ để tham khảo định hướng, thay đổi theo đề án tuyển sinh hằng năm.</div>`:`<div class="pf-warn">Đang cập nhật dữ liệu trường đào tạo cho ngành này.</div>`}
+      <div class="pf-sec-h">3 · Đánh giá năng lực cạnh tranh</div>
+      <div class="pf-cap">${capRow('Học lực (GPA)',gpaA)}${capRow('Tiếng Anh',engA)}${capRow('Tư duy & độ hợp ngành',tdA)}</div>
+      <div class="pf-bench">📌 <b>Chuẩn trường top:</b> thường cần GPA ≥ 9.0, IELTS ≥ 6.5–7.0, và điểm ĐGNL/ĐGTD cao hoặc giải HSG / chứng chỉ quốc tế. Hãy xem khoảng cách giữa hiện tại và chuẩn này để lên kế hoạch.</div>
     </div>
 
     <div class="pf-sec">
-      <div class="pf-sec-h">4 · Kỹ năng cần rèn luyện từ bây giờ</div>
-      <div class="pf-skills">${allSkills.map(s=>`<div class="pf-skill"><span class="pf-skill-tick">✓</span>${s}</div>`).join('')}</div>
+      <div class="pf-sec-h">4 · Xu hướng nghề nghiệp 5–10 năm tới</div>
+      <div class="pf-trend">
+        <div class="pf-tr pf-tr-co"><div class="pf-tr-h">📈 Cơ hội</div><div class="pf-tr-b">${xh.co}</div></div>
+        <div class="pf-tr pf-tr-ru"><div class="pf-tr-h">⚠️ Rủi ro</div><div class="pf-tr-b">${xh.ru}</div></div>
+        <div class="pf-tr pf-tr-ky"><div class="pf-tr-h">🚀 Kỹ năng mới cần</div><div class="pf-tr-b">${xh.ky}</div></div>
+      </div>
     </div>
 
     <div class="pf-sec">
-      <div class="pf-sec-h">5 · Lộ trình hành động theo lớp (để đạt ngành mục tiêu)</div>
-      ${roadmapHTML(target,profileGrade)}
+      <div class="pf-sec-h">5 · Lộ trình 3 năm với KPI cụ thể</div>
+      <div class="pf-road">${kpiCard(10,kpi10)}${kpiCard(11,kpi11)}${kpiCard(12,kpi12)}</div>
+    </div>
+
+    <div class="pf-sec">
+      <div class="pf-sec-h">6 · Danh sách trường: Dream – Target – Safety</div>
+      ${n?`<div class="pf-tier-grid">${tierBox('🌟 DREAM (ước mơ)','pf-tier-dream',dreamG,'Mục tiêu phấn đấu — điểm cao nhất.')}${tierBox('🎯 TARGET (vừa sức)','pf-tier-target',targetG,'Chọn nhóm sát năng lực hiện tại của em.')}${tierBox('🛡️ SAFETY (an toàn)','pf-tier-safe',safeG,'Phương án chắc chắn đỗ.')}</div>
+      <div class="pf-note">Kèm phương thức tuyển sinh tiêu biểu — bấm "Đề án" để xem đầy đủ. Điểm chuẩn 2025 chỉ tham khảo định hướng.</div>`:`<div class="pf-warn">Đang cập nhật dữ liệu trường cho ngành này.</div>`}
+    </div>
+
+    <div class="pf-sec">
+      <div class="pf-sec-h">7 · Kế hoạch xây dựng hồ sơ cá nhân (portfolio)</div>
+      <div class="pf-skills">${pf.map(s=>`<div class="pf-skill"><span class="pf-skill-tick">✓</span>${s}</div>`).join('')}</div>
+    </div>
+
+    <div class="pf-sec">
+      <div class="pf-sec-h">8 · Mốc kiểm tra định kỳ (mỗi 6 tháng)</div>
+      <div class="pf-chk">${checks.map(c=>`<div class="pf-chk-row${profileGrade==c[1]?' cur':''}"><div class="pf-chk-when">${c[0]}</div><div class="pf-chk-do">${c[2]}</div></div>`).join('')}</div>
+      <div class="pf-note">Mỗi 6 tháng, học sinh + phụ huynh + tư vấn viên Alpha cùng rà soát và điều chỉnh hướng đi nếu cần.</div>
     </div>
 
     <div class="pf-foot">
       <div>Hồ sơ lập ngày ${td} · <b>Hướng Nghiệp Alpha</b></div>
       <div>Hotline: 096 937 4411 | huongnghiepalpha@gmail.com | www.huongnghiepalpha.vn</div>
-      <div class="pf-sign">Chữ ký học sinh: ……………………… &nbsp;&nbsp; Phụ huynh: ……………………… &nbsp;&nbsp; Tư vấn viên Alpha: ………………………</div>
+      <div class="pf-sign">Chữ ký học sinh: ……………… &nbsp; Phụ huynh: ……………… &nbsp; Tư vấn viên Alpha: ………………</div>
     </div>
   </div>`;
   lastProfileText=buildProfileText(name,dob,school,target,top5,tnText,allSkills,mien);
   saveProfile();
 }
+
 
 function printProfile(){genProfile();setTimeout(()=>window.print(),120);}
 
@@ -2993,13 +3146,17 @@ function saveProfile(){try{localStorage.setItem('alpha_hoso',JSON.stringify({
   name:(document.getElementById('hs-name')||{}).value||'',
   dob:(document.getElementById('hs-dob')||{}).value||'',
   school:(document.getElementById('hs-school')||{}).value||'',
-  grade:profileGrade,traits:[...selT],selN:selN,targetId:profileTargetId
+  grade:profileGrade,traits:[...selT],selN:selN,targetId:profileTargetId,
+  gpa:(document.getElementById('hs-gpa')||{}).value||'',eng:(document.getElementById('hs-eng')||{}).value||'',
+  dream:(document.getElementById('hs-dream')||{}).value||'',motiv:(document.getElementById('hs-motiv')||{}).value||'',
+  style:(document.getElementById('hs-style')||{}).value||''
 }));}catch(e){}}
 
 function loadProfile(){try{
   const d=JSON.parse(localStorage.getItem('alpha_hoso')||'null');if(!d)return;
   const setV=(id,v)=>{const el=document.getElementById(id);if(el&&v)el.value=v;};
   setV('hs-name',d.name);setV('hs-dob',d.dob);setV('hs-school',d.school);
+  setV('hs-gpa',d.gpa);setV('hs-eng',d.eng);setV('hs-dream',d.dream);setV('hs-motiv',d.motiv);setV('hs-style',d.style);
   if(d.grade){profileGrade=d.grade;document.querySelectorAll('.hs-grade').forEach(b=>b.classList.toggle('active',b.textContent.trim()==='Lớp '+d.grade));}
   if(Array.isArray(d.traits)){d.traits.forEach(id=>{if(!selT.has(id)){selT.add(id);const b=document.getElementById('tb-'+id);if(b)b.classList.add('sel');}});
     const n=selT.size;const st=document.getElementById('sbar-txt');if(st)st.textContent=n===0?'Chưa chọn gì — hãy chọn ít nhất 2 mô tả bản thân':`Đã chọn ${n} mô tả bản thân`;
